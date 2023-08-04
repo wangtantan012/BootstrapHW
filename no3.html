@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <style>
@@ -82,7 +83,7 @@
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
 
     }
-    
+
     .box_1headline {
       width: 100%;
       height: 3rem;
@@ -101,15 +102,33 @@
     .purple {
       background-color: #c4c7f1c7;
     }
-    .textPurple{
+
+    .textPurple {
       color: #838ae6;
     }
-    .cardText1{
+
+    .cardText1 {
       color: #6c757d;
       opacity: 0.9;
+      font-size: 12px;
+      letter-spacing: 3px;
 
     }
 
+    .picBoxSize {
+      width: 30px;
+      height: 30px;
+    }
+
+    .iconSize {
+      width: 9px;
+      height: 15px;
+    }
+
+    .box_4 {
+      background-color: #4650dd;
+
+    }
   </style>
 </head>
 
@@ -121,11 +140,11 @@
       <span class="text1">BUBBLY</span>
       <span class="text2">DASHBOARD</span>
     </div>
-    <div class="icon d-flex   align-items-center ms-5 justify-content-between">
-      <input type="text" name="search" placeholder="Search">
-      <div class="pic3"></div>
-      <div class="pic4"></div>
-      <div class="pic5"></div>
+    <div class="icon d-flex   align-items-center ms-5 ">
+      <input type="text" name="search" placeholder="Search" class="mx-4">
+      <div class="pic3 mx-2"></div>
+      <div class="pic4 mx-2"></div>
+      <div class="pic5 mx-2"></div>
     </div>
   </nav>
   <div class="container-fluid bac d-flex h-100">
@@ -137,64 +156,70 @@
       <div class="col-12 box_1 row d-flex p-2 h-100">
         <div class="col-12 col-sm-6 col-lg-3 my-4">
           <div class=" h-90 card w-100">
-            <div class=" card-header d-flex justify-content-between">
+            <div class=" card-header d-flex justify-content-between p-4">
               <div><span class="pb-1 text-danger fs-5">$10,500</span>
                 <br>
-                <span class="cardText1 mt-4">EARNING</span>
+                <span class="cardText1 mt-4 ">EARNINGS</span>
               </div>
-              <img src="./img/box1.png" alt="" class="W-10">
+              <img src="./img/box1.png" alt="" class="picBoxSize my-auto ">
             </div>
-            <div class="card-body bg-danger-subtle rounded-bottom text-danger">20% increase </div>
+            <div class="card-body bg-danger-subtle rounded-bottom text-danger d-flex justify-content-between p-4">20%
+              increase
+              <i class="fa-solid fa-caret-up fa-2xs my-auto mx-3" style="color: #dc3545;"></i>
+            </div>
 
           </div>
         </div>
         <div class="col-12 col-sm-6 col-lg-3 my-4">
           <div class="h-90 card w-100">
-            <div class="card-header d-flex justify-content-between">
+            <div class="card-header d-flex justify-content-between p-4 ">
               <div>
                 <span class="text-primary fs-5">584</span>
                 <br>
-                <span  class="cardText1" >READERS</span>
+                <span class="cardText1">READERS</span>
               </div>
-              <img src="./img/box2.png" alt="">
+              <img src="./img/box2.png" alt="" class="picBoxSize my-auto ">
 
             </div>
-            <div class="card-body bg-primary-subtle rounded-bottom text-primary">
+            <div class="card-body bg-primary-subtle rounded-bottom text-primary d-flex justify-content-between p-4">
               3% increase
+              <i class="fa-solid fa-caret-up fa-2xs my-auto mx-3" style="color: #0d6efd;"></i>
             </div>
           </div>
         </div>
-
         <div class="col-12 col-sm-6 col-lg-3 my-4">
           <div class="h-90 card w-100">
-            <div class="card-header d-flex justify-content-between ">
+            <div class="card-header d-flex justify-content-between p-4">
               <div>
                 <span class="textPurple fs-5">876</span>
-              <br>
-              <span  class="cardText1">BOOKMARKS</span>
+                <br>
+                <span class="cardText1">BOOKMARKS</span>
               </div>
-              
-              <img src="./img/box3.png" alt="">
+
+              <img src="./img/box3.png" alt="" class="picBoxSize my-auto">
             </div>
 
-            <div class="card-body purple rounded-bottom textPurple">
+            <div class="card-body purple rounded-bottom textPurple d-flex justify-content-between p-4">
               10% increase
+              <i class="fa-solid fa-caret-up fa-2xs my-auto mx-3" style="color: #838ae6;"></i>
             </div>
           </div>
         </div>
         <div class="col-12 col-sm-6 col-lg-3 my-4">
           <div class="h-90 card w-100">
-            <div class="card-header d-flex justify-content-between">
+            <div class="card-header d-flex justify-content-between p-4">
               <div>
                 <span class="text-success fs-5">3,500</span>
                 <br>
-                <span  class="cardText1 fs-6">VISITORS</span></div>
-              
-              <img src="./img/box4.png" alt="">
+                <span class="cardText1">VISITORS</span>
+              </div>
+
+              <img src="./img/box4.png" alt="" class="picBoxSize my-auto ">
             </div>
-            
-            <div class="card-body bg-success-subtle rounded-bottom text-success">
+
+            <div class="card-body bg-success-subtle rounded-bottom text-success d-flex justify-content-between p-4">
               5% decrease
+              <i class="fa-solid fa-caret-up fa-2xs fa-rotate-180 my-auto mx-3" style="color: #198754;"></i>
             </div>
           </div>
         </div>
@@ -204,10 +229,38 @@
         <div class="box2 col-12 col-xl-9 "></div>
         <div class="box2 col-12 col-xl-3 "></div>
       </div>
-      <div class="box_3 col-12 card d-flex"></div>
-      <div class="box_4 col-12 d-flex">
-        <div class="box4 col-12 col-md-6 "></div>
-        <div class="box4 col-12 col-md-6"></div>
+      <div class="box_3 col-12 d-flex"></div>
+
+      <div class="box_4 col-12 d-flex flex-wrap ps-2 row">
+        <div class="box4 col-12 col-md-6  row">
+          <div class="col-12 col-sm-5 ">
+            <div class="card">
+              <div class="card-header"></div>
+              <div class="card-body"></div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-7  row">
+            <div class="col-6 col-sm-6">
+              <div class="card">
+                <div class="card-header"></div>
+                <div class="card-body"></div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6">
+              <div class="card">
+                <div class="card-header"></div>
+                <div class="card-body"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box4 col-12 col-md-6 ">
+          <div class="card">
+            <div class="card-header"></div>
+            <div class="card-body"></div>
+          </div>
+        </div>
       </div>
       <div class="box_5 col-12 d-flex">
         <div class="box5 col-12 col-lg-4 "></div>
