@@ -6,10 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap demo</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <style>
     body {
+      margin: 0;
+      background-color: rgb(248,249,250);
       /* position: relative; */
     }
 
@@ -149,10 +152,11 @@
     .organic,
     .facebook {
       display: -block;
-      width: 1rem;
-      height: 1rem;
+      width: 0.5rem;
+      height: 0.5rem;
       border-radius: 50%;
       background-color: rgb(70, 80, 221);
+      line-height: 16px;
     }
 
 
@@ -163,7 +167,7 @@
     .bg {
       background-color: rgb(205,245,241);
       border-radius: 10%;
-      color:rgb(68,207,183)
+      color:rgb(68,207,183);
     }
 
     .bg-2 {
@@ -180,7 +184,7 @@
 
     }
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:1200px) {
       .h-500-a {
         max-height: 150px;
       }
@@ -201,6 +205,12 @@
       border-radius: 50%;
       margin-top: 4px;
       margin-left: 4px;
+    }
+    .image2 {
+      background-color: rgb(255,243,205);
+      color: rgb(255,193,7);
+      line-height: 40px;
+      text-align: center;
     }
 
     .fs-14-self{
@@ -230,8 +240,54 @@
       display: none;
     }
 
+    .bg-self{
+      background-color: rgb(52,58,64);
+    }
 
-    
+    .active-white:active{
+      color:white;
+    }
+    .active-white:focus{
+      color:white;
+    }
+    .h-little-self{
+      height:6px;
+    }
+  
+    .orange-self{
+      background-color: rgb(255,243,205);
+      color:rgb(255,193,7);   
+    }
+
+    .minW-self{
+      min-width:880px ;
+    }
+
+    .blue-self{
+      background-color: rgb(70,80,221);
+    }
+
+    .w-15-self{
+      width: 15%;
+    }
+    .w-93-self{
+      width: 93%;
+    }
+
+    .hover-grey{
+      border-radius: 0;
+      color:rgb(51,51,51);
+      font-weight: 400;
+    }
+    .hover-grey:hover{
+      background-color:rgb(217,217,217);
+    }
+    .hover-grey:active{
+      background-color:rgb(217,217,217);
+    }
+    .hover-grey:focus{
+      background-color:rgb(217,217,217);
+    }
   </style>
 </head>
 
@@ -354,7 +410,7 @@
                   <div class="col-12 fs-6 fw-bolder text-body-tertiary l-spacing-self fs-14-self">TOTAL REVENUE</div>
                   <div class="col-12 text-primary fs-2 fw-bolder lh-">$19,200</div>
                   <div class="col-6 col-xl-5 fs-14-self fw-bold text-secondary">+$2,032 </div>
-                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg fw-bolder text-start">↑19.5%</span></div>
+                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg px-1 fw-bolder text-start"><i class="fa-solid fa-arrow-up" style="color: #03cfb7;"></i>19.5%</span></div>
                 </div>
               </div>
               <div class="col-6 col-xl-4 white">
@@ -362,7 +418,7 @@
                   <div class="col-12  fw-bolder text-body-tertiary l-spacing-self fs-14-self">ORGANIC SEARCH</div>
                   <div class="col-12  fs-4">$19,200</div>
                   <div class="col-6 col-xl-5 fs-14-self fw-bold text-secondary ">+$2,123</div>
-                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg fw-bolder">↑21.3%</span></div>
+                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg px-1 fw-bolder"><i class="fa-solid fa-arrow-up" style="color: #03cfb7;"></i>21.3%</span></div>
                 </div>
               </div>
               <div class="col-6 col-xl-4 white">
@@ -370,7 +426,7 @@
                   <div class="col-12  fw-bolder text-body-tertiary l-spacing-self fs-14-self">FACEBOOK ADS</div>
                   <div class="col-12  fs-4">$2,500</div>
                   <div class="col-6 col-xl-5 fs-14-self fw-bold text-secondary ">-$233</div>
-                  <div class="col-5  p-0 text-bg-light fs-12-self"><span class="bg-2 fw-bolder">↑2.1%</span></div>
+                  <div class="col-5  p-0 text-bg-light fs-12-self"><span class="bg-2 px-1 fw-bolder"><i class="fa-solid fa-arrow-down  " style="color: #dc3545;"></i>2.1%</span></div>
                 </div>
               </div>
               <div class="col-12  white">
@@ -378,10 +434,10 @@
               </div>
 
               <ul class="mt-4  d-flex justify-content-center  text-center">
-                <li class="d-flex me-3 lh-1">
+                <li class="d-flex me-3 lh-lg ">
                   <div class="organic me-1"></div>Organic Search
                 </li>
-                <li class="d-flex me-3 lh-1">
+                <li class="d-flex me-3 lh-lg">
                   <div class="facebook me-1"> </div>Facebook Ads
                 </li>
               </ul>
@@ -550,7 +606,301 @@
           </div>
         </div>
       </div>
-      <div class="box_3 col-12 d-flex"></div>
+      <div class="box_3 row d-flex ps-3 pe-3 w-100 ">
+        <div class="card w-100 rounded-4 overflow-hidden ">
+          <div class="row ">
+            <div class="col-12 shadow">
+              <div class="p-4 d-flex justify-content-between ms-1 my-2 ">
+                <h6 class="d-inline-block m-0 lh-lg l-spacing-self fs-14-self">LATEST CONTRACTS</h6>
+                <div class="btn-group ">
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                </div>
+
+              </div>
+            </div>
+            <div class="row py-4 row-gap-2">
+              
+              <div class="col-3 col-md-2 pr-0 ">
+              
+                <select class="form-select form-select-sm w-100 ms-3 fs-12-self  " aria-label=".form-select-sm example">
+                  <option  value="1">Bulk Actions</option>
+                  <option  value="2">Delete</option>
+                </select>
+                
+              </div>
+              <div class="col-4 col-md-2 px-0 d-flex">
+                <button type="button" class="btn btn-outline-primary fs-12-self rounded-2 ms-2 lg-sm py-0">Apply
+                </button>
+                <select class="form-select form-select-sm w-50 ms-1 p-0 fs-12-self" aria-label=".form-select-sm example">
+                  <option value="1">&nbsp;&nbsp;&nbsp;5</option>
+                  <option value="2">&nbsp;&nbsp;10</option>
+                  <option value="2">&nbsp;&nbsp;15</option>
+                  <option value="2">&nbsp;&nbsp;20</option>
+                  <option value="2">&nbsp;&nbsp;25</option>
+                </select>
+              </div>
+              <div class="col-5 col-md-5 fs-12-self lh-lg"> entries per page</div>
+              <div class="col-12 col-md-3 d-flex justify-content-end"> 
+                <input class="form-control ms-3 w-100 px-5 fs-12-self " type="search" placeholder="Search..." aria-label="Search">
+              </div>
+            </div>
+            
+            <div class="row ms-0 me-0 bg-self w-100 text-white py-3 minW-self">
+              <div class="col-4 ps-4 fs-12-self fw-bolder  d-flex justify-content-between align-items-center">
+                   <span class="d-inline-block " >NAME</span>
+                  <div class="text-secondary pb-3">
+                    <div class="h-little-self"><i class=" fa-solid fa-caret-up d-inline-block active-white "></i></div>
+                    <div class="h-little-self"><i class="fa-solid fa-sort-down  d-inline-block active-white"></i></div>
+                  </div>
+              </div>
+              <div class="col-2 ps-0 fs-12-self fw-bolder d-flex justify-content-between align-items-center">
+                <span class="d-inline-block" >COMPANY</span>
+                  <div class="text-secondary pb-3">
+                    <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i></div>
+                    <div class="h-little-self"><i class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                  </div>
+              </div>
+              <div class="col-2 ps-0 fs-12-self fw-bolder d-flex justify-content-between align-items-center">
+                <span class="d-inline-block" >STATUS</span>
+                  <div class="text-secondary pb-3">
+                    <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i></div>
+                    <div class="h-little-self"><i class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                  </div>
+              </div>
+              <div class="col-2 ps-0 fs-12-self fw-bolder d-flex justify-content-between align-items-center">
+                <span class="d-inline-block" >CONTRACT</span>
+                  <div class="text-secondary  pb-3">
+                    <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i></div>
+                    <div class="h-little-self"><i class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                  </div>
+              </div>
+              <div class="col-2 ps-0 pe-4 fs-12-self fw-bolder d-flex justify-content-between align-items-center">
+                <span class="d-inline-block" >DATE</span>
+                  <div class="text-secondary pb-3">
+                    <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i></div>
+                    <div class="h-little-self"><i class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                  </div>
+              </div>
+            </div>
+            <div class="row fs-14-self py-3 border-bottom minW-self">
+              <div class="col-4 d-flex ps-3 ">
+                <div class="img-box ">
+                  <img class="image" src="./img/people/avatar-10.jpg">
+                </div>
+                <div class="ms-4"><span class="fw-bolder">Merrill Garrett</span><br>merrillgarrett@affluex.com
+                </div>
+              </div>
+              <div class="col-2 d-flex">
+                <div class="ms-1"><span class="fw-bolder">Affluex</span><br><span>Utting</span>
+                </div>
+              </div>
+              <div class="col-2 d-flex align-items-center">
+                <span class="fs-12-self px-1 orange-self rounded">●&nbsp;On Hold</span>
+              </div>
+              <div class="col-2 d-flex align-items-center">
+                <span class=" p-2">48%</span>
+                <div class="d-flex bg-body-secondary h-little-self w-75 rounded">
+                  <div class="d-flex blue-self h-little-self w-50 rounded-start"></div>
+                </div>
+              </div>
+              <div class="col-2 d-flex align-items-center justify-content-between">
+                <span class="p-2">2021/02/04</span>
+                <div class="btn-group ">
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                  </div>
+              </div>
+            </div>
+            <div class="row fs-14-self py-3 border-bottom minW-self">
+              <div class="col-4 d-flex ps-3 ">
+                <div class="img-box">
+                  <div class="image image2 fw-bolder">L</div>
+                </div>
+                <div class="ms-4">
+                  <span class="fw-bolder">Lester Roach</span><br>lesterroach@applica.com
+                </div>
+              </div>
+              <div class="col-2 d-flex">
+                <div class="ms-1">
+                  <span class="fw-bolder">Applica</span><br>Coventry<span></span>
+                </div>
+              </div>
+              <div class="col-2 d-flex align-items-center">
+                <span class="fs-12-self px-1 bg-2 rounded">●&nbsp;Closed</span>
+              </div>
+              <div class="col-2 d-flex align-items-center">
+                <span class=" p-2">22%</span>
+                <div class="d-flex bg-body-secondary h-little-self w-75 rounded">
+                  <div class="d-flex blue-self h-little-self w-25 rounded-start"></div>
+                </div>
+              </div>
+              <div class="col-2 d-flex align-items-center justify-content-between">
+                <span class=" p-2">2021/04/04</span>
+                <div class="btn-group ">
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="row fs-14-self py-3 border-bottom minW-self">
+              <div class="col-4 d-flex ps-3 ">
+                <div class="img-box ">
+                  <img class="image" src="./img/people/avatar-2.jpg">
+                </div>
+                <div class="ms-4"><span class="fw-bolder">Millicent Henry
+                  </span><br>millicenthenry@balooba.com
+                </div>
+              </div>
+              <div class="col-2 d-flex">
+                <div class="ms-1">
+                  <span class="fw-bolder">Balooba</span><br><span> Caron</span>
+                </div>
+              </div>
+              <div class="col-2 d-flex align-items-center">
+                <span class="fs-12-self px-1 bg rounded">●&nbsp;In Progress</span>
+              </div>
+              <div class="col-2 d-flex align-items-center">
+                <span class="p-2">77%</span>
+                <div class="d-flex bg-body-secondary h-little-self w-75 rounded">
+                  <div class="d-flex blue-self h-little-self w-75 rounded-start"></div>
+                </div>
+              </div>
+              <div class="col-2 d-flex align-items-center justify-content-between">
+                <span class="p-2">2021/04/09</span>
+                <div class="btn-group ">
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                  </div>
+              </div>
+            </div>
+             <div class="row fs-14-self py-3 border-bottom minW-self">
+              <div class="col-4 d-flex ps-3 ">
+                <div class="img-box">
+                  <div class="image image2 fw-bolder">M</div>
+                </div>
+                <div class="ms-4">
+                  <span class="fw-bolder">Meyers Swanson
+                    </span><br>meyersswanson@candecor.com
+                </div>
+              </div>
+              <div class="col-2 d-flex">
+                <div class="ms-1">
+                  <span class="fw-bolder">Candecor
+                  </span><br>Finderne<span></span>
+                </div>
+              </div>
+              <div class="col-2 d-flex align-items-center">
+                <span class="fs-12-self px-1 bg-2 rounded">●&nbsp;Closed</span>
+              </div>
+              <div class="col-2 d-flex align-items-center">
+                <span class="p-2">14%</span>
+                <div class="d-flex bg-body-secondary h-little-self w-75 rounded">
+                  <div class="d-flex blue-self h-little-self w-15-self rounded-start"></div>
+                </div>
+              </div>
+              <div class="col-2 d-flex align-items-center justify-content-between">
+                <span class=" p-2">2021/02/19</span>
+                <div class="btn-group ">
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="row fs-14-self py-3 border-bottom minW-self">
+              <div class="col-4 d-flex ps-3 ">
+                <div class="img-box ">
+                  <img class="image" src="./img/people/avatar-4.jpg">
+                </div>
+                <div class="ms-4">
+                  <span class="fw-bolder">Garza Shaw</span><br>garzashaw@capscreen.com
+                </div>
+              </div>
+              <div class="col-2 d-flex">
+                <div class="ms-1">
+                  <span class="fw-bolder">Capscreen
+                    </span><br>Beyerville<span></span>
+                </div>
+              </div>
+              <div class="col-2 d-flex align-items-center">
+                <span class="fs-12-self px-1 orange-self rounded">●&nbsp;On Hold</span>
+              </div>
+              <div class="col-2 d-flex align-items-center">
+                <span class="p-2">93%</span>
+                <div class="d-flex bg-body-secondary h-little-self w-75 rounded">
+                  <div class="d-flex blue-self h-little-self w-93-self rounded-start"></div>
+                </div>
+              </div>
+              <div class="col-2 d-flex align-items-center justify-content-between">
+                <span class="p-2">2021/12/22</span>
+                <div class="btn-group ">
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                  </div>
+              </div>
+            </div>
+              <!-- NOW -->
+            <div class="col-12 py-3 d-flex align-items-center justify-content-between ">
+              <div class="px-2">Showing 21 to 25 of 30 entries</div>
+              <div class="btn-toolbar mb-3 pe-3" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group me-2 " role="group" aria-label="First group">
+                  <button type="button" class="btn hover-grey fw-lighter"><i class="fa-solid fa-angle-left"></i></button>
+                  <button type="button" class="btn hover-grey">1</button>
+                  <button type="button" class="btn hover-grey">2</button>
+                  <button type="button" class="btn hover-grey">3</button>
+                  <button type="button" class="btn hover-grey">4</button>
+                  <button type="button" class="btn hover-grey">5</button>
+                  <button type="button" class="btn hover-grey">6</button>
+                  <button type="button" class="btn hover-grey fw-lighter"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div>
+
+
+      </div>
 
       <div class="box_4 col-12 d-flex flex-wrap row my-4">
         <div class="box4 col-12 col-md-6  ">
