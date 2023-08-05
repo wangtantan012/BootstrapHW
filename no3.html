@@ -142,7 +142,7 @@
       height: 15px;
     }
 
-
+    
 
     /* 新加入的style */
 
@@ -161,18 +161,29 @@
     }
 
     .bg {
-      background-color: rgb(48, 214, 213);
+      background-color: rgb(205,245,241);
       border-radius: 10%;
+      color:rgb(68,207,183)
     }
 
     .bg-2 {
       background-color: rgb(248, 215, 218);
       border-radius: 10%;
+      color:rgb(220,53,69);
     }
 
 
     .h-500-a {
-      height: 575px;
+      max-height: 565px;
+      /* width:100%; */
+      /* aspect-ratio: 6 / 14; */
+
+    }
+
+    @media screen and (max-width:768px) {
+      .h-500-a {
+        max-height: 150px;
+      }
     }
 
     .img-box {
@@ -180,8 +191,10 @@
       height: 48px;
       border-radius: 50%;
       background-color: white;
-    }
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
 
+    }
+    
     .image {
       width: 40px;
       height: 40px;
@@ -189,6 +202,36 @@
       margin-top: 4px;
       margin-left: 4px;
     }
+
+    .fs-14-self{
+      font-size: 14px;
+    }
+    .fs-12-self{
+      font-size: 12px;
+    }
+
+    .l-spacing-self{
+      letter-spacing: .1rem;
+    }
+
+    .btn-self{
+      width: 32px;
+      height:32px;
+      /* border-radius: 50%; */
+      background-color: white;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    .btn-self:hover{
+      background-color:#c4c7f1c7 ;
+    }
+    .dropdown-toggle::after{
+      display: none;
+    }
+
+
+    
   </style>
 </head>
 
@@ -285,50 +328,49 @@
         </div>
 
       </div>
-      <div class="box_2 col-12 row d-flex">
-        <div class="box2 col-12 col-xl-9">
+      <div class="box_2  row  d-flex pe-4 h-100">
+        <div class="box2 col-12 col-xl-9 p-3 ">
           <div class="card rounded-4">
             <div class="row px-2">
               <div class="col-12 white ">
-                <div class="p-3 d-flex justify-content-between ms-3 mt-2 mb-2 ">
-                  <h6 class="d-inline-block">SALES BY CHANNEL</h6>
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                <div class="p-4 d-flex justify-content-between ms-1 my-2 ">
+                  <h6 class="d-inline-block m-0 lh-lg l-spacing-self fs-14-self">SALES BY CHANNEL</h6>
+                  <div class="btn-group ">
+                    <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
                       aria-expanded="false">
-
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                      <li><a class="dropdown-item" href="#"> Expand</a></li>
-                      <li><a class="dropdown-item" href="#">Minimize</a></li>
-                      <li><a class="dropdown-item" href="#"> Reload</a></li>
-                      <li><a class="dropdown-item" href="#">Remove</a></li>
-                    </ul>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
                   </div>
 
                 </div>
               </div>
-              <div class="col-4 white">
-                <div class="row ms-3">
-                  <div class="col-12 fs-5 fw-bolder text-secondary">TOTAL REVENUE</div>
-                  <div class="col-12 text-primary fs-2 fw-bolder">$19,200</div>
-                  <div class="col-6 fs-6">+$2,032 </div>
-                  <div class="col-6 text-bg-light fs-6"><span class="bg">19.5%</span></div>
+              <div class="col-12 col-xl-4 white">
+                <div class="row ms-2 mt-0 mb-2">
+                  <div class="col-12 fs-6 fw-bolder text-body-tertiary l-spacing-self fs-14-self">TOTAL REVENUE</div>
+                  <div class="col-12 text-primary fs-2 fw-bolder lh-">$19,200</div>
+                  <div class="col-6 col-xl-5 fs-14-self fw-bold text-secondary">+$2,032 </div>
+                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg fw-bolder text-start">↑19.5%</span></div>
                 </div>
               </div>
-              <div class="col-4 white">
-                <div class="row  mt-2 mb-2">
-                  <div class="col-12 fs-6 fw-bolder text-black-50">ORGANIC SEARCH</div>
+              <div class="col-6 col-xl-4 white">
+                <div class="row ms-2 my-2">
+                  <div class="col-12  fw-bolder text-body-tertiary l-spacing-self fs-14-self">ORGANIC SEARCH</div>
                   <div class="col-12  fs-4">$19,200</div>
-                  <div class="col-6 fs-6">+$2,032 </div>
-                  <div class="col-6 text-bg-light fs-6"><span class="bg">19.5%</span></div>
+                  <div class="col-6 col-xl-5 fs-14-self fw-bold text-secondary ">+$2,123</div>
+                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg fw-bolder">↑21.3%</span></div>
                 </div>
               </div>
-              <div class="col-4 white">
-                <div class="row  mt-2 mb-2">
-                  <div class="col-12 fs-6 fw-bolder text-black-50">ORGANIC SEARCH</div>
-                  <div class="col-12  fs-4">$19,200</div>
-                  <div class="col-6 fs-6">+$2,032 </div>
-                  <div class="col-6 text-bg-light fs-6"><span class="bg-2">19.5%</span></div>
+              <div class="col-6 col-xl-4 white">
+                <div class="row  my-2">
+                  <div class="col-12  fw-bolder text-body-tertiary l-spacing-self fs-14-self">FACEBOOK ADS</div>
+                  <div class="col-12  fs-4">$2,500</div>
+                  <div class="col-6 col-xl-5 fs-14-self fw-bold text-secondary ">-$233</div>
+                  <div class="col-5  p-0 text-bg-light fs-12-self"><span class="bg-2 fw-bolder">↑2.1%</span></div>
                 </div>
               </div>
               <div class="col-12  white">
@@ -336,87 +378,87 @@
               </div>
 
               <ul class="mt-4  d-flex justify-content-center  text-center">
-                <li class="d-flex me-2">
-                  <div class="organic"></div>Organic Search
+                <li class="d-flex me-3 lh-1">
+                  <div class="organic me-1"></div>Organic Search
                 </li>
-                <li class="d-flex me-2">
-                  <div class="facebook"> </div>Facebook Ads
+                <li class="d-flex me-3 lh-1">
+                  <div class="facebook me-1"> </div>Facebook Ads
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="box2 col-12 col-xl-3 ">
-          <div class="card rounded-4">
-            <div class="p-3 d-flex justify-content-between ms-3 mt-2 mb-2 ">
-              <h6 class="d-inline-block">LATEST ACTIVITY</h6>
+        <div class="box2 col-12 col-xl-3 p-3 ">
+          <div class="card rounded-4 ">
+            <div class="p-4 d-flex justify-content-between  my-2 shadow">
+              <h6 class="d-inline-block lh-lg ms-1 l-spacing-self fs-14-self">LATEST ACTIVITY</h6>
               <div class="btn-group">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-
-                </button>
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="#"> Expand</a></li>
-                  <li><a class="dropdown-item" href="#">Minimize</a></li>
-                  <li><a class="dropdown-item" href="#"> Reload</a></li>
-                  <li><a class="dropdown-item" href="#">Remove</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
                 </ul>
               </div>
             </div>
-            <div class="h-500-a overflow-x-hidden overflow-y-scroll">
+            <div class=" h-500-a overflow-x-hidden overflow-y-scroll">
               <ul class="mt-4 list-inline ">
                 <div class="row mt-4">
-                  <div class="col-1  col-xl-4 ">
+                  <div class="col-2  col-xl-4 ">
                     <div class="img-box ms-3">
                       <img class="image " src="./img/people/avatar-0.jpg">
                     </div>
                   </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Nielsen
+                  <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Nielsen
                       Cobb&nbsp;</span>subscribed to your
                     newsletter.<span class="text-secondary"><br>
                       3m ago</span></div>
                 </div>
                 <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
+                  <div class="col-2 col-xl-4">
                     <div class="img-box ms-3">
                       <img class="image" src="./img/people/avatar-1.jpg">
                     </div>
                   </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Margret Cote
+                  <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Margret Cote
                       &nbsp;</span>liked your post 🎉
                     <span class="text-secondary"><br>4m ago</span>
                   </div>
                 </div>
                 <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
+                  <div class="col-2 col-xl-4">
                     <div class="img-box ms-3">
                       <img class="image" src="./img/people/avatar-2.jpg">
                     </div>
                   </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break">
+                  <div class="col-9 col-xl-7 ms-3 text-start text-break">
                     <span class="fw-bolder">Rachel Vinson &nbsp;</span> placed an order.
                     <span class="text-secondary"><br>5m ago</span>
                   </div>
                 </div>
                 <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
+                  <div class="col-2 col-xl-4">
                     <div class="img-box ms-3">
                       <img class="image" src="./img/people/avatar-3.jpg">
                     </div>
                   </div>
-                  <div class="col-10 ms-3 col-xl-7 text-start text-break"><span class="fw-bolder">Gabrielle
+                  <div class="col-9 ms-3 col-xl-7 text-start text-break"><span class="fw-bolder">Gabrielle
                       Aguirre&nbsp;</span> commented on "How to
                     season your new grill."
                     <span class="text-secondary"><br>6m ago</span>
                   </div>
                 </div>
                 <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
+                  <div class="col-2 col-xl-4">
                     <div class="img-box ms-3">
                       <img class="image" src="./img/people/avatar-4.jpg">
                     </div>
                   </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Spears
+                  <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Spears
                       Collier&nbsp;</span> subscribed to your
                     newsletter.
                     <span class="text-secondary"><br>7m ago</span>
@@ -424,35 +466,35 @@
                 </div>
 
                 <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
+                  <div class="col-2 col-xl-4">
                     <div class="img-box ms-3 ">
                       <img class="image" src="./img/people/avatar-5.jpg">
                     </div>
                   </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Keisha Thomas&nbsp;
+                  <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Keisha Thomas&nbsp;
                     </span>liked your post 🎉
                     <span class="text-secondary"><br>8m ago</span>
                   </div>
                 </div>
 
                 <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
+                  <div class="col-2 col-xl-4">
                     <div class="img-box ms-3">
                       <img class="image" src="./img/people/avatar-6.jpg">
                     </div>
                   </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Elisabeth
+                  <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Elisabeth
                       Key&nbsp;</span>placed an order.
                     <span class="text-secondary"><br>9m ago</span>
                   </div>
                 </div>
                 <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
+                  <div class="col-2 col-xl-4">
                     <div class="img-box ms-3">
                       <img class="image" src="./img/people/avatar-7.jpg">
                     </div>
                   </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Patel
+                  <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Patel
                       Mack&nbsp;</span>commented on "How to season
                     your new grill."
                     <span class="text-secondary"><br> 10m ago</span>
@@ -460,44 +502,44 @@
                   .
                 </div>
                 <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
+                  <div class="col-2 col-xl-4">
                     <div class="img-box ms-3 ">
                       <img class="image" src="./img/people/avatar-8.jpg">
                     </div>
                   </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Erika
+                  <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Erika
                       Whitaker&nbsp;</span>subscribed to your
                     newsletter.<br><span class="text-secondary">11m ago</span>
                   </div>
                   <div class="row mt-4">
-                    <div class="col-1 col-xl-4">
+                    <div class="col-2 col-xl-4">
                       <div class="img-box ms-3">
                         <img class="image" src="./img/people/avatar-9.jpg">
                       </div>
                     </div>
-                    <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Meyers
+                    <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Meyers
                         Swanson&nbsp;</span> liked your post 🎉
                       <span class="text-secondary"> <br>12m ago</span>
                     </div>
                   </div>
                   <div class="row mt-4">
-                    <div class="col-1 col-xl-4">
+                    <div class="col-2 col-xl-4">
                       <div class="img-box ms-3">
                         <img class="image" src="./img/people/avatar-10.jpg">
                       </div>
                     </div>
-                    <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Townsend
+                    <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Townsend
                         Sloan</span>&nbsp;placed an order.
                       <span class="text-secondary"><br>13m ago</span>
                     </div>
                   </div>
                   <div class="row mt-4">
-                    <div class="col-1 col-xl-4">
+                    <div class="col-2 col-xl-4">
                       <div class="img-box ms-3">
                         <img class="image" src="./img/people/avatar-11.jpg">
                       </div>
                     </div>
-                    <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Millicent
+                    <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Millicent
                         Henry</span>&nbsp;commented on "How to
                       season your new grill."
                       <span class="text-secondary"> <br>14m ago</span>
