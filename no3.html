@@ -33,30 +33,30 @@
     
 
     .pic1 {
-      background-image: url(./img/1.png);
-      background-size: cover;
+      /* background-image: url(./img/1.png); */
+      /* background-size: cover; */
       width: 29.75px;
       height: 29.78px;
     }
 
-    .pic3 {
-      background-image: url(./img/3.png);
+    .pic3-4 {
+      /* background-image: url(./img/3.png);
       background-size: cover;
-      background-repeat: no-repeat;
+      background-repeat: no-repeat; */
       width: 29.99px;
       height: 23.99px;
     }
 
-    .pic4 {
+     /*.pic4 {
       background-image: url(./img/4.png);
       background-size: cover;
       width: 29.99px;
       height: 23.99px;
-    }
+    } */
 
     .pic5 {
-      background-image: url(./img/5.png);
-      background-size: cover;
+      /* background-image: url(./img/5.png); */
+      /* background-size: cover; */
       width: 47.99px;
       height: 47.99px;
     }
@@ -184,9 +184,11 @@
 
 
     .h-500-a {
-      max-height: 565px;
+      height: 100%;
+      max-height: 890px;
+      min-height: 0px;
       /* width:100%; */
-      /* aspect-ratio: 6 / 14; */
+      aspect-ratio: 6 / 15.7; 
 
     }
 
@@ -285,6 +287,9 @@
     .w-15-self {
       width: 15%;
     }
+    .w-20-self {
+      width: 35%;
+    }
 
     .w-93-self {
       width: 93%;
@@ -320,26 +325,39 @@
 
  
     .form-control:focus{
-      border-color:#a3a8ee!important;
-      box-shadow: 0 0 0 0.25rem #a3a8ee!important;
+      border-color:rgba(163,168,238,0.5)!important;
+      box-shadow: 0 0 0 0.25rem rgba(163,168,238,0.5)!important;
       
     }
+    .form-control2{
+      background-color: rgb(233,236,239);
+      width: 250px;
+    }
+    .form-control2:focus{
+      border-color:transparent!important;
+      box-shadow: 0 0 0 0.25rem transparent!important;
+      background-color: rgb(233,236,239);
+    }
+    
   </style>
 </head>
 
 <body>
   <nav
-    class="container-fluid col-12 shadow p-3 align-items-center bg-body-tertiary rounded d-flex justify-content-between">
-    <div class="pic1 cursor-pointer"></div>
-    <div class="text cursor-pointer">
+    class="container-fluid col-12 position-relative p-3 align-items-center bg-body-tertiary rounded d-flex justify-content-between">
+    <div class="w-25 cursor-pointer"><img class="pic1" src="./img/1.png"></div>
+    <div class="text cursor-pointer position-absolute top-50 start-50 translate-middle">
       <span class="text1">BUBBLY</span>
       <span class="text2">DASHBOARD</span>
     </div>
-    <div class="icon d-flex align-items-center ms-5 ">
-      <input type="text" name="search" placeholder="Search" class="mx-4">
-      <div class="pic3 mx-2 cursor-pointer"></div>
-      <div class="pic4 mx-2 cursor-pointer"></div>
-      <div class="pic5 mx-2 cursor-pointer"></div>
+    <div class="icon d-flex align-items-center  w-20-self justify-content-between">
+      <div class="d-flex position-relative  mx-1">
+        <input type="search" name="search" placeholder="Search" class=" form-control form-control2">
+        <i class="fa-solid fa-magnifying-glass position-absolute  end-0 top-50 translate-middle-y pe-1 cursor-pointer"></i>
+      </div>
+      <div class="mx-1 cursor-pointer"><img class="pic3-4" src="./img/3.png"></div>
+      <div class="mx-1 cursor-pointer"><img class="pic3-4" src="./img/4.png"></div>
+      <div class=" mx-1 cursor-pointer"><img class="pic5" src="./img/5.png"></div>
     </div>
   </nav>
   <div class=" bac d-flex h-100">
@@ -643,8 +661,8 @@
     </div>
 
     <div name="content" class="container-fluid d-flex align-conten.t-start flex-wrap h-100 flex-shrink-1">
-      <div class="col-12 box_0 mt-4 mx-4">
-        <h1>DEFAULT DASHBOARD</h1>
+      <div class="col-12 box_0 mt-4 mx-4 ">
+        <h1 class="l-spacing-self text-dark-emphasis fw-light">DEFAULT DASHBOARD</h1>
       </div>
       <div class=" box_1 col-12 row d-flex p-0 h-100">
         <div class="col-12 col-sm-6 col-lg-3 my-4">
@@ -718,7 +736,7 @@
         </div>
 
       </div>
-      <div class="box_2  row  d-flex pe-4 h-100">
+      <div class="box_2  row  d-flex pe-4 h-100 ">
         <div class="box2 col-12 col-xl-9 p-3 ">
           <div class="card rounded-4">
             <div class="row px-2">
@@ -789,10 +807,10 @@
             </div>
           </div>
         </div>
-        <div class="box2 col-12 col-xl-3 p-3 ">
+        <div class="box2 col-12 col-xl-3 p-3 h-100">
           <div class="card rounded-4 ">
             <div class="p-4 d-flex justify-content-between  my-2 shadow">
-              <h6 class="d-inline-block lh-lg ms-1 l-spacing-self fs-14-self">LATEST ACTIVITY</h6>
+              <h6 class="d-inline-block lh-lg m-0 l-spacing-self fs-14-self text-body-secondary">LATEST ACTIVITY</h6>
               <div class="btn-group">
                 <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
                   data-bs-toggle="dropdown" aria-expanded="false">
@@ -955,12 +973,12 @@
           </div>
         </div>
       </div>
-      <div class="box_3 row d-flex ps-3 pe-3 w-100 ">
+      <div class="box_3 row d-flex ps-3 pe-3 w-100 pt-4 ">
         <div class="card w-100 rounded-4 overflow-hidden ">
           <div class="row ">
             <div class="col-12 shadow">
               <div class="p-4 d-flex justify-content-between ms-1 my-2 ">
-                <h6 class="d-inline-block m-0 lh-lg l-spacing-self fs-14-self">LATEST CONTRACTS</h6>
+                <h6 class="d-inline-block m-0 lh-lg l-spacing-self fs-14-self text-body-secondary">LATEST CONTRACTS</h6>
                 <div class="btn-group ">
                   <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -1002,7 +1020,7 @@
               </div>
               <div class="col-5 col-md-5 fs-12-self lh-lg"> entries per page</div>
               <div class="col-12 col-md-3 d-flex justify-content-end"> 
-                <input class="form-control ms-3 w-100 px-5 fs-12-self border-purple-self" type="search" placeholder="Search..." aria-label="Search">
+                <input class="form-control ms-3 w-100  fs-12-self " type="search" placeholder="Search..." aria-label="Search">
               </div>
             </div>
             
@@ -1257,20 +1275,22 @@
               </div>
             </div>
             <!-- NOW -->
-            <div class="col-12 py-3 d-flex align-items-center justify-content-between ">
-              <div class="px-2">Showing 26 to 30 of 30 entries</div>
-              <div class="btn-toolbar mb-3 pe-3" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="row py-3 mb-3 align-items-center justify-content-between ">
+              <div class="ps-4 col-12 col-md-5 ">Showing 26 to 30 of 30 entries</div>
+              <div class="btn-toolbar  pe-3 col-11 col-md-7 d-flex justify-content-end  align-items-center" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group me-2 " role="group" aria-label="First group">
-                  <button type="button" class="btn hover-grey fw-lighter"><i
-                      class="fa-solid fa-angle-left"></i></button>
+                  <button type="button" class="btn hover-grey fw-lighter">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </button>
                   <button type="button" class="btn hover-grey">1</button>
                   <button type="button" class="btn hover-grey">2</button>
                   <button type="button" class="btn hover-grey">3</button>
                   <button type="button" class="btn hover-grey">4</button>
                   <button type="button" class="btn hover-grey">5</button>
                   <button type="button" class="btn hover-grey">6</button>
-                  <button type="button" class="btn hover-grey fw-lighter"><i
-                      class="fa-solid fa-angle-right"></i></button>
+                  <button type="button" class="btn hover-grey fw-lighter">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1280,12 +1300,12 @@
 
       </div>
 
-      <div class="box_4 col-12 d-flex flex-wrap row my-4">
-        <div class="box4 col-12 col-md-6  ">
+      <div class="box_4 row col-12 d-flex flex-wrap my-4">
+        <div class="box4 col-12 col-md-6 pt-2 ">
           <div class="card my-2 h-100">
             <div class="card-body row ms-0">
               <div class="col-12 col-sm-5 my-auto flex-column ">
-                <span class="mb-3 fs-5 fw-bold">625</span>
+                <span class="mb-3 fs-2 fw-bolder">625</span>
                 <br>
                 <span class="mb-3 cardText3">NEW CUSTOMERS</span>
                 <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0"
@@ -1295,14 +1315,14 @@
               </div>
               <div class="col-12 col-sm-7 row m-auto">
                 <div class="col-6 col-sm-6 text-center ">
-                  <span class="fs-5 fw-bold ">254</span>
+                  <span class="fs-4 fw-bold ">254</span>
                   <br>
                   <span class="cardText2">Affiliates</span>
                   <hr>
                   <span class="cardText2">+123</span>
                 </div>
                 <div class="col-6 col-sm-6 text-center">
-                  <span class="fs-5 fw-bold">328</span>
+                  <span class="fs-4 fw-bold">328</span>
                   <br>
                   <span class="cardText2">SEM</span>
                   <hr>
@@ -1312,14 +1332,14 @@
             </div>
           </div>
         </div>
-        <div class="box4 col-12 col-md-6 ">
+        <div class="box4 col-12 col-md-6  pt-2 ">
           <div class="card h-100 my-2">
             <div class="card-body d-flex flex-column flex-sm-row">
               <div class="col-12 col-sm-1">
                 <i class="fa-solid fa-arrow-down fa-lg " style="color: #dc3545;"></i>
               </div>
               <div class="col-12 col-sm-5 my-auto flex-column">
-                <span class="fs-5 fw-bold">1,112</span>
+                <span class="fs-2 fw-bold">1,112</span>
                 <br>
                 <span class="cardText2">Affiliate Sales</span>
                 <br>
@@ -1332,7 +1352,7 @@
                 <i class="fa-solid fa-arrow-down fa-rotate-180 fa-lg" style="color: #03cfb7;"></i>
               </div>
               <div class="col-12 col-sm-5 my-auto flex-column">
-                <span class="fs-5 fw-bold">258</span>
+                <span class="fs-2 fw-bold">258</span>
                 <br>
                 <span class="cardText2">Ads Sales</span>
                 <br>
@@ -1347,7 +1367,7 @@
         </div>
       </div>
       <div class="box_5 col-12 d-flex flex-column  flex-lg-row my-4">
-        <div class="box5 col-12 col-lg-4 mb-3 pe-4">
+        <div class="box5 col-12 col-lg-4 mb-3 pe-4 pt-2">
           <div class="card h-100 mx-1 ">
             <div class="card-header bg-white d-flex justify-content-between p-4">
               <span class="cardText3 ">PROJECT UPDATES</span>
@@ -1405,7 +1425,7 @@
             </div>
           </div>
         </div>
-        <div class="box5 col-12 col-lg-4 mb-3 pe-4">
+        <div class="box5 col-12 col-lg-4 mb-3 pe-4 pt-2">
           <div class="card h-100 mx-1 mb-2">
             <div class="card-header bg-white d-flex justify-content-between p-4">
               <span class="cardText3">CLOSED PROJECTS</span>
@@ -1467,7 +1487,7 @@
             </div>
           </div>
         </div>
-        <div class="box5 col-12 col-lg-4 mb-3 pe-4">
+        <div class="box5 col-12 col-lg-4 mb-3 pe-4 pt-2">
           <div class="card h-100 mx-1 ">
             <div class="card-header bg-white d-flex justify-content-between p-4">
               <span class="cardText3">TICKETS SOLVED</span>
