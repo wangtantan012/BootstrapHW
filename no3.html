@@ -13,7 +13,8 @@
   <style>
     body {
       box-sizing: border-box;
-      background-color: rgb(248, 249, 250);
+      background-color: rgb(248,249,250);
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
       /* position: relative; */
     }
 
@@ -29,9 +30,7 @@
       z-index: 4;
     }
 
-    .icon {
-      /* display: ; */
-    }
+    
 
     .pic1 {
       background-image: url(./img/1.png);
@@ -163,7 +162,7 @@
       height: 0.5rem;
       border-radius: 50%;
       background-color: rgb(70, 80, 221);
-      line-height: 16px;
+      /* line-height: 54px; */
     }
 
 
@@ -229,8 +228,8 @@
       font-size: 12px;
     }
 
-    .l-spacing-self {
-      letter-spacing: .1rem;
+    .l-spacing-self{
+      letter-spacing: .2rem;
     }
 
     .btn-self {
@@ -308,22 +307,39 @@
     .hover-grey:focus {
       background-color: rgb(217, 217, 217);
     }
+    .cursor-pointer{
+      cursor: pointer;
+    }
+    .border-left-self{
+      border-left: 1.5px solid #dee2e6;
+    }
+
+    .hover-self:hover{
+      background-color: rgb(236,236,236);
+    }
+
+ 
+    .form-control:focus{
+      border-color:#a3a8ee!important;
+      box-shadow: 0 0 0 0.25rem #a3a8ee!important;
+      
+    }
   </style>
 </head>
 
 <body>
   <nav
     class="container-fluid col-12 shadow p-3 align-items-center bg-body-tertiary rounded d-flex justify-content-between">
-    <div class="pic1"></div>
-    <div class="text">
+    <div class="pic1 cursor-pointer"></div>
+    <div class="text cursor-pointer">
       <span class="text1">BUBBLY</span>
       <span class="text2">DASHBOARD</span>
     </div>
     <div class="icon d-flex align-items-center ms-5 ">
       <input type="text" name="search" placeholder="Search" class="mx-4">
-      <div class="pic3 mx-2"></div>
-      <div class="pic4 mx-2"></div>
-      <div class="pic5 mx-2"></div>
+      <div class="pic3 mx-2 cursor-pointer"></div>
+      <div class="pic4 mx-2 cursor-pointer"></div>
+      <div class="pic5 mx-2 cursor-pointer"></div>
     </div>
   </nav>
   <div class=" bac d-flex h-100">
@@ -706,9 +722,9 @@
         <div class="box2 col-12 col-xl-9 p-3 ">
           <div class="card rounded-4">
             <div class="row px-2">
-              <div class="col-12 white ">
-                <div class="p-4 d-flex justify-content-between ms-1 my-2 ">
-                  <h6 class="d-inline-block m-0 lh-lg l-spacing-self fs-14-self">SALES BY CHANNEL</h6>
+              <div class="col-12 white border-bottom">
+                <div class="p-3 d-flex justify-content-between  my-2 ">
+                  <h6 class="d-inline-block m-0 lh-lg l-spacing-self fs-14-self  text-body-secondary">&nbsp;SALES BY CHANNEL</h6>
                   <div class="btn-group ">
                     <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
                       data-bs-toggle="dropdown" aria-expanded="false">
@@ -727,43 +743,47 @@
 
                 </div>
               </div>
-              <div class="col-12 col-xl-4 white">
-                <div class="row ms-2 mt-0 mb-2">
+              <div class="col-12 col-sm-6 col-md-3  white py-md-5 pt-5 pb-0">
+                <div class="row ms-2 mt-0 mb-2 ">
                   <div class="col-12 fs-6 fw-bolder text-body-tertiary l-spacing-self fs-14-self">TOTAL REVENUE</div>
-                  <div class="col-12 text-primary fs-2 fw-bolder lh-">$19,200</div>
-                  <div class="col-6 col-xl-5 fs-14-self fw-bold text-secondary">+$2,032 </div>
-                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg px-1 fw-bolder text-start"><i
-                        class="fa-solid fa-arrow-up" style="color: #03cfb7;"></i>19.5%</span></div>
+                  <div class="col-12 text-primary fs-1 fw-bolder ">$19,200</div>
+                  <div class="col-6 col-xl-5 fs-14-self fw-medium text-secondary">+$2,032 </div>
+                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg py-1 px-2 fw-bolder text-start"><i class="fa-solid fa-arrow-up" style="color: #03cfb7;"></i>19.5%</span></div>
                 </div>
               </div>
-              <div class="col-6 col-xl-4 white">
-                <div class="row ms-2 my-2">
-                  <div class="col-12  fw-bolder text-body-tertiary l-spacing-self fs-14-self">ORGANIC SEARCH</div>
+              <div class="col-6 col-md-3 white pt-sm-5 pt-1">
+                <div class="row ms-2 my-2  border-left-self">
+                  <div class="col-12  fw-medium text-body-tertiary l-spacing-self fs-14-self opacity-75">ORGANIC SEARCH</div>
                   <div class="col-12  fs-4">$19,200</div>
-                  <div class="col-6 col-xl-5 fs-14-self fw-bold text-secondary ">+$2,123</div>
-                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg px-1 fw-bolder"><i
-                        class="fa-solid fa-arrow-up" style="color: #03cfb7;"></i>21.3%</span></div>
+                  <div class="col-6 col-xl-5 fs-14-self fw-medium text-secondary ">+$2,123</div>
+                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg py-1 px-2 fw-bolder"><i class="fa-solid fa-arrow-up" style="color: #03cfb7;"></i>21.3%</span></div>
                 </div>
               </div>
-              <div class="col-6 col-xl-4 white">
-                <div class="row  my-2">
-                  <div class="col-12  fw-bolder text-body-tertiary l-spacing-self fs-14-self">FACEBOOK ADS</div>
+              <div class="col-6 col-md-3 white pt-md-5 pt-1 pb-5">
+                <div class="row ms-2 my-2 border-left-self">
+                  <div class="col-12  fw-medium text-body-tertiary l-spacing-self fs-14-self opacity-75">FACEBOOK ADS</div>
                   <div class="col-12  fs-4">$2,500</div>
-                  <div class="col-6 col-xl-5 fs-14-self fw-bold text-secondary ">-$233</div>
-                  <div class="col-5  p-0 text-bg-light fs-12-self"><span class="bg-2 px-1 fw-bolder"><i
-                        class="fa-solid fa-arrow-down  " style="color: #dc3545;"></i>2.1%</span></div>
+                  <div class="col-6 col-xl-5 fs-14-self fw-medium text-secondary ">-$233</div>
+                  <div class="col-5  p-0 text-bg-light fs-12-self"><span class="bg-2 py-1 px-2 fw-bolder"><i class="fa-solid fa-arrow-down  " style="color: #dc3545;"></i>2.1%</span></div>
                 </div>
               </div>
+              <div class="d-none d-md-flex col-md-3 white pt-md-5 pb-5 justify-content-end align-items-center">
+                <div class="d-flex my-2 justify-content-end pe-4">
+                  <img class="w-50"src="./img/profit.png">
+                </div>
+              </div>
+
+
               <div class="col-12  white">
                 <div class="p-3 bar-chart"><img src="./img/barchart.png" class="w-100"></div>
               </div>
 
-              <ul class="mt-4  d-flex justify-content-center  text-center">
-                <li class="d-flex me-3 lh-lg ">
-                  <div class="organic me-1"></div>Organic Search
+              <ul class="mt-4  d-flex justify-content-center   text-center">
+                <li class="d-flex me-3 align-items-center ">
+                  <div class="organic me-1"></div><div>Organic Search</div>
                 </li>
-                <li class="d-flex me-3 lh-lg">
-                  <div class="facebook me-1"> </div>Facebook Ads
+                <li class="d-flex me-3 align-items-center ">
+                  <div class="facebook me-1"> </div><div>Facebook Ads</div>
                 </li>
               </ul>
             </div>
@@ -790,7 +810,7 @@
                 </ul>
               </div>
             </div>
-            <div class=" h-500-a overflow-x-hidden overflow-y-scroll">
+            <div class=" h-500-a overflow-x-hidden overflow-y-scroll fs-14-self">
               <ul class="mt-4 list-inline ">
                 <div class="row mt-4">
                   <div class="col-2  col-xl-4 ">
@@ -962,18 +982,17 @@
             <div class="row py-4 row-gap-2">
 
               <div class="col-3 col-md-2 pr-0 ">
-
-                <select class="form-select form-select-sm w-100 ms-3 fs-12-self  " aria-label=".form-select-sm example">
-                  <option value="1">Bulk Actions</option>
-                  <option value="2">Delete</option>
+              
+                <select class="form-select form-select-sm w-100 ms-3 fs-12-self form-control  " aria-label=".form-select-sm example">
+                  <option  value="1">Bulk Actions</option>
+                  <option  value="2">Delete</option>
                 </select>
 
               </div>
               <div class="col-4 col-md-2 px-0 d-flex">
                 <button type="button" class="btn btn-outline-primary fs-12-self rounded-2 ms-2 lg-sm py-0">Apply
                 </button>
-                <select class="form-select form-select-sm w-50 ms-1 p-0 fs-12-self"
-                  aria-label=".form-select-sm example">
+                <select class="form-select form-select-sm w-50 ms-1 p-0 fs-12-self form-control" aria-label=".form-select-sm example">
                   <option value="1">&nbsp;&nbsp;&nbsp;5</option>
                   <option value="2">&nbsp;&nbsp;10</option>
                   <option value="2">&nbsp;&nbsp;15</option>
@@ -982,13 +1001,12 @@
                 </select>
               </div>
               <div class="col-5 col-md-5 fs-12-self lh-lg"> entries per page</div>
-              <div class="col-12 col-md-3 d-flex justify-content-end">
-                <input class="form-control ms-3 w-100 px-5 fs-12-self " type="search" placeholder="Search..."
-                  aria-label="Search">
+              <div class="col-12 col-md-3 d-flex justify-content-end"> 
+                <input class="form-control ms-3 w-100 px-5 fs-12-self border-purple-self" type="search" placeholder="Search..." aria-label="Search">
               </div>
             </div>
-
-            <div class="row ms-0 me-0 bg-self w-100 text-white py-3 minW-self">
+            
+            <div class="row ms-0 me-0 bg-self w-100 text-white py-3 minW-self cursor-pointer">
               <div class="col-4 ps-4 fs-12-self fw-bolder  d-flex justify-content-between align-items-center">
                 <span class="d-inline-block ">NAME</span>
                 <div class="text-secondary pb-3">
@@ -1033,7 +1051,7 @@
                 </div>
               </div>
             </div>
-            <div class="row fs-14-self py-3 border-bottom minW-self">
+            <div class="row fs-14-self py-3 border-bottom minW-self hover-self">
               <div class="col-4 d-flex ps-3 ">
                 <div class="img-box ">
                   <img class="image" src="./img/people/avatar-10.jpg">
@@ -1071,7 +1089,7 @@
                 </div>
               </div>
             </div>
-            <div class="row fs-14-self py-3 border-bottom minW-self">
+            <div class="row fs-14-self py-3 border-bottom minW-self hover-self">
               <div class="col-4 d-flex ps-3 ">
                 <div class="img-box">
                   <div class="image image2 fw-bolder">L</div>
@@ -1113,7 +1131,7 @@
 
               </div>
             </div>
-            <div class="row fs-14-self py-3 border-bottom minW-self">
+            <div class="row fs-14-self py-3 border-bottom minW-self hover-self">
               <div class="col-4 d-flex ps-3 ">
                 <div class="img-box ">
                   <img class="image" src="./img/people/avatar-2.jpg">
@@ -1153,7 +1171,7 @@
                 </div>
               </div>
             </div>
-            <div class="row fs-14-self py-3 border-bottom minW-self">
+             <div class="row fs-14-self py-3 border-bottom minW-self hover-self">
               <div class="col-4 d-flex ps-3 ">
                 <div class="img-box">
                   <div class="image image2 fw-bolder">M</div>
@@ -1197,7 +1215,7 @@
 
               </div>
             </div>
-            <div class="row fs-14-self py-3 border-bottom minW-self">
+            <div class="row fs-14-self py-3 border-bottom minW-self hover-self">
               <div class="col-4 d-flex ps-3 ">
                 <div class="img-box ">
                   <img class="image" src="./img/people/avatar-4.jpg">
@@ -1240,7 +1258,7 @@
             </div>
             <!-- NOW -->
             <div class="col-12 py-3 d-flex align-items-center justify-content-between ">
-              <div class="px-2">Showing 21 to 25 of 30 entries</div>
+              <div class="px-2">Showing 26 to 30 of 30 entries</div>
               <div class="btn-toolbar mb-3 pe-3" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group me-2 " role="group" aria-label="First group">
                   <button type="button" class="btn hover-grey fw-lighter"><i
@@ -1333,7 +1351,17 @@
           <div class="card h-100 mx-1 ">
             <div class="card-header bg-white d-flex justify-content-between p-4">
               <span class="cardText3 ">PROJECT UPDATES</span>
-              <i class="fa-solid fa-ellipsis-vertical" style="color: #949494;"></i>
+              <div class="btn-group ">
+                <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+              </div>
             </div>
             <div class="card-body">
               <div class="d-flex justify-content-between my-3">
@@ -1381,7 +1409,17 @@
           <div class="card h-100 mx-1 mb-2">
             <div class="card-header bg-white d-flex justify-content-between p-4">
               <span class="cardText3">CLOSED PROJECTS</span>
-              <i class="fa-solid fa-ellipsis-vertical" style="color: #949494;"></i>
+              <div class="btn-group ">
+                <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+              </div>
             </div>
             <div class="card-body d-flex flex-column">
               <img src="./img/chart1.JPG" alt="">
@@ -1433,7 +1471,17 @@
           <div class="card h-100 mx-1 ">
             <div class="card-header bg-white d-flex justify-content-between p-4">
               <span class="cardText3">TICKETS SOLVED</span>
-              <i class="fa-solid fa-ellipsis-vertical" style="color: #949494;"></i>
+              <div class="btn-group ">
+                <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+              </div>
             </div>
             <div class="card-body d-flex flex-column">
               <img src="./img/chart2.JPG" alt="">
