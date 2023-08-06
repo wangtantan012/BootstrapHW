@@ -7,20 +7,24 @@
   <title>Bootstrap demo</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <style>
     body {
-      margin: 0;
+      box-sizing: border-box;
       background-color: rgb(248,249,250);
       /* position: relative; */
+    }
+    html{
+      margin: 0;
     }
 
     nav {
       background-color: white;
-      margin-bottom: 1rem;
-      /* position: absolute; */
-      /* z-index: 10; */
+      margin-bottom: .3rem;
+      position: relative;
+      z-index: 4;
     }
 
     .icon {
@@ -299,7 +303,7 @@
       <span class="text1">BUBBLY</span>
       <span class="text2">DASHBOARD</span>
     </div>
-    <div class="icon d-flex   align-items-center ms-5 ">
+    <div class="icon d-flex align-items-center ms-5 ">
       <input type="text" name="search" placeholder="Search" class="mx-4">
       <div class="pic3 mx-2"></div>
       <div class="pic4 mx-2"></div>
@@ -307,9 +311,127 @@
     </div>
   </nav>
   <div class="container-fluid bac d-flex h-100">
-    <div class="docs shadow p-3 mb-5 bg-body-tertiary "></div>
+    <div class=" shadow p-3 bg-body-tertiary  text-center ">
+      <div class="m-4"><span class="cardText1 p-2">MAIN</span></div>
+      
+      <div class="blue-self text-center ">
+        <i class="fa-sharp fa-light fa-house-chimney" style="color: #ffffff;"></i>
+        <br>
+        <span style="color: #ffffff;">Dashboards</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #ffffff;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-regular fa-book-open"></i>
+        <br>
+        <span>CMS</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-regular fa-file-lines"></i>
+        <br>
+        <span>Widgets</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-sharp fa-light fa-truck"></i>
+        <br>
+        <span>E-commerce</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-sharp fa-light fa-layer-group"></i>
+        <br>
+        <span>Pages</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-sharp fa-light fa-user-vneck-hair"></i>
+        <br>
+        <span>User</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-light fa-sliders fa-rotate-270"></i>
+        <br>
+        <span>Components</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-light fa-chart-pie"></i>
+        <br>
+        <span>Charts</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-light fa-cabinet-filing"></i>
+        <br>
+        <span>Forms</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-sharp fa-light fa-table-cells-large"></i>
+        <br>
+        <span>Tables</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="m-4"><span class="cardText1 p-2">DOCS</span></div>
+      
+      <div class="text-center">
+        <i class="fa-solid fa-arrows-left-right"></i>
+        <br>
+        <span>Introduction</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-sharp fa-light fa-oven"></i>
+        <br>
+        <span>Directory Structure</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-thin fa-keyboard"></i>
+        <br>
+        <span>Gulp.js</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-sharp fa-light fa-pen-ruler"></i>
+        <br>
+        <span>CSS</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-light fa-medal"></i>
+        <br>
+        <span>Credits</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+      <div class="text-center">
+        <i class="fa-light fa-circle-n"></i>
+        <br>
+        <span>Changelog</span>
+        <br>
+        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </div>
+
+    </div>
     <div class="container-fluid d-flex align-conten.t-start  flex-wrap h-100">
-      <div class="col-12 box_0">
+      <div class="col-12 box_0 mt-4 mx-4">
         <h1>DEFAULT DASHBOARD</h1>
       </div>
       <div class=" box_1 col-12 row d-flex p-0 h-100">
@@ -969,8 +1091,8 @@
         </div>
       </div>
       <div class="box_5 col-12 d-flex flex-column  flex-lg-row my-4">
-        <div class="box5 col-12 col-lg-4 ">
-          <div class="card h-100 mx-3">
+        <div class="box5 col-12 col-lg-4 mb-3 ">
+          <div class="card h-100 mx-1 ">
             <div class="card-header bg-white d-flex justify-content-between p-4">
               <span class="cardText3 ">PROJECT UPDATES</span>
               <i class="fa-solid fa-ellipsis-vertical" style="color: #949494;"></i>
@@ -1017,8 +1139,8 @@
             </div>
           </div>
         </div>
-        <div class="box5 col-12 col-lg-4 ">
-          <div class="card h-100 mx-3">
+        <div class="box5 col-12 col-lg-4 mb-3">
+          <div class="card h-100 mx-1 mb-2">
             <div class="card-header bg-white d-flex justify-content-between p-4">
               <span class="cardText3">CLOSED PROJECTS</span>
               <i class="fa-solid fa-ellipsis-vertical" style="color: #949494;"></i>
@@ -1069,8 +1191,8 @@
             </div>
           </div>
         </div>
-        <div class="box5 col-12 col-lg-4 ">
-          <div class="card h-100 mx-3">
+        <div class="box5 col-12 col-lg-4 mb-3">
+          <div class="card h-100 mx-1">
             <div class="card-header bg-white d-flex justify-content-between p-4">
               <span class="cardText3">TICKETS SOLVED</span>
               <i class="fa-solid fa-ellipsis-vertical" style="color: #949494;"></i>
