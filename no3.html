@@ -13,11 +13,13 @@
   <style>
     body {
       box-sizing: border-box;
-      background-color: rgb(248,249,250);
+      background-color: rgb(248, 249, 250);
       /* position: relative; */
     }
-    html{
+
+    html {
       margin: 0;
+      box-sizing: border-box;
     }
 
     nav {
@@ -34,21 +36,22 @@
     .pic1 {
       background-image: url(./img/1.png);
       background-size: cover;
-      width: 15.75px;
-      height: 17.78px;
+      width: 29.75px;
+      height: 29.78px;
     }
 
     .pic3 {
       background-image: url(./img/3.png);
       background-size: cover;
-      width: 23.99px;
+      background-repeat: no-repeat;
+      width: 29.99px;
       height: 23.99px;
     }
 
     .pic4 {
       background-image: url(./img/4.png);
       background-size: cover;
-      width: 23.99px;
+      width: 29.99px;
       height: 23.99px;
     }
 
@@ -149,7 +152,7 @@
       height: 15px;
     }
 
-    
+
 
     /* 新加入的style */
 
@@ -169,15 +172,15 @@
     }
 
     .bg {
-      background-color: rgb(205,245,241);
+      background-color: rgb(205, 245, 241);
       border-radius: 10%;
-      color:rgb(68,207,183);
+      color: rgb(68, 207, 183);
     }
 
     .bg-2 {
       background-color: rgb(248, 215, 218);
       border-radius: 10%;
-      color:rgb(220,53,69);
+      color: rgb(220, 53, 69);
     }
 
 
@@ -202,7 +205,7 @@
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
 
     }
-    
+
     .image {
       width: 40px;
       height: 40px;
@@ -210,87 +213,100 @@
       margin-top: 4px;
       margin-left: 4px;
     }
+
     .image2 {
-      background-color: rgb(255,243,205);
-      color: rgb(255,193,7);
+      background-color: rgb(255, 243, 205);
+      color: rgb(255, 193, 7);
       line-height: 40px;
       text-align: center;
     }
 
-    .fs-14-self{
+    .fs-14-self {
       font-size: 14px;
     }
-    .fs-12-self{
+
+    .fs-12-self {
       font-size: 12px;
     }
 
-    .l-spacing-self{
+    .l-spacing-self {
       letter-spacing: .1rem;
     }
 
-    .btn-self{
+    .btn-self {
       width: 32px;
-      height:32px;
+      height: 32px;
       /* border-radius: 50%; */
       background-color: white;
       line-height: 24px;
       text-align: center;
     }
 
-    .btn-self:hover{
-      background-color:#c4c7f1c7 ;
+    .btn-self:hover {
+      background-color: #c4c7f1c7;
     }
-    .dropdown-toggle::after{
+
+    .dropdown-toggle::after {
       display: none;
     }
 
-    .bg-self{
-      background-color: rgb(52,58,64);
+    .bg-self {
+      background-color: rgb(52, 58, 64);
     }
 
-    .active-white:active{
-      color:white;
-    }
-    .active-white:focus{
-      color:white;
-    }
-    .h-little-self{
-      height:6px;
-    }
-  
-    .orange-self{
-      background-color: rgb(255,243,205);
-      color:rgb(255,193,7);   
+    .active-white:active {
+      color: white;
     }
 
-    .minW-self{
-      min-width:880px ;
+    .active-white:focus {
+      color: white;
     }
 
-    .blue-self{
-      background-color: rgb(70,80,221);
+    .h-little-self {
+      height: 6px;
     }
 
-    .w-15-self{
+    .orange-self {
+      background-color: rgb(255, 243, 205);
+      color: rgb(255, 193, 7);
+    }
+
+    .minW-self {
+      min-width: 880px;
+    }
+
+    .blue-self {
+      background-color: rgb(70, 80, 221);
+    }
+
+    .blue-self-subtle {
+      background-color: rgb(114, 123, 243);
+    }
+
+    .w-15-self {
       width: 15%;
     }
-    .w-93-self{
+
+    .w-93-self {
       width: 93%;
     }
 
-    .hover-grey{
+    .hover-grey {
       border-radius: 0;
-      color:rgb(51,51,51);
+      color: rgb(51, 51, 51);
       font-weight: 400;
     }
-    .hover-grey:hover{
-      background-color:rgb(217,217,217);
+
+    .hover-grey:hover {
+      background-color: rgb(217, 217, 217);
     }
-    .hover-grey:active{
-      background-color:rgb(217,217,217);
+
+    .hover-grey:active {
+      background-color: rgb(217, 217, 217);
     }
-    .hover-grey:focus{
-      background-color:rgb(217,217,217);
+
+    .hover-grey:focus {
+      background-color: rgb(217, 217, 217);
     }
   </style>
 </head>
@@ -310,127 +326,307 @@
       <div class="pic5 mx-2"></div>
     </div>
   </nav>
-  <div class="container-fluid bac d-flex h-100">
-    <div class=" shadow p-3 bg-body-tertiary  text-center ">
+  <div class=" bac d-flex h-100">
+    <div name="docs" class=" shadow p-3 bg-body-tertiary  text-center ">
       <div class="m-4"><span class="cardText1 p-2">MAIN</span></div>
-      
-      <div class="blue-self text-center ">
+      <!-- button1 -->
+      <a class="btn btn-primary blue-self w-100" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+        aria-expanded="false" aria-controls="multiCollapseExample1">
         <i class="fa-sharp fa-light fa-house-chimney" style="color: #ffffff;"></i>
         <br>
         <span style="color: #ffffff;">Dashboards</span>
         <br>
         <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #ffffff;"></i>
+      </a>
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="shadow-sm">
+          <a href="#" class=" w-100 h-25 d-inline-block blue-self-subtle p-2 text-decoration-none">
+            <li class="list-unstyled" style="color: #ffffff;">Default</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">CMS</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">E-commerce</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Projects</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Charts</li>
+          </a>
+        </div>
       </div>
-      <div class="text-center">
-        <i class="fa-regular fa-book-open"></i>
+      <!-- button2 -->
+      <a class="btn w-100" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false"
+        aria-controls="multiCollapseExample2">
+        <i class="fa-regular fa-book-open" style="color: #6c757d;"></i>
         <br>
-        <span>CMS</span>
+        <span style="color: #6c757d;">CMS</span>
         <br>
         <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </a>
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <div class="shadow-sm w-100">
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Posts</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2 w-100">Add new post</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Categories</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Media library</li>
+          </a>
+        </div>
       </div>
-      <div class="text-center">
-        <i class="fa-regular fa-file-lines"></i>
+      <!-- button3 -->
+      <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false"
+        aria-controls="multiCollapseExample3">
+        <i class="fa-regular fa-file-lines" style="color: #6c757d;"></i>
         <br>
-        <span>Widgets</span>
+        <span style="color: #6c757d;">Widgets</span>
         <br>
         <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </a>
+      <div class="collapse multi-collapse" id="multiCollapseExample3">
+        <div class="shadow-sm  w-100">
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Stats</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Data</li>
+          </a>
+
+        </div>
       </div>
-      <div class="text-center">
-        <i class="fa-sharp fa-light fa-truck"></i>
+      <!-- button4 -->
+
+      <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false"
+        aria-controls="multiCollapseExample4">
+        <i class="fa-sharp fa-light fa-truck" style="color: #6c757d;"></i>
         <br>
-        <span>E-commerce</span>
+        <span class=" w-100" style="color: #6c757d;">E-commerce</span>
         <br>
         <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </a>
+      <div class="collapse multi-collapse" id="multiCollapseExample4">
+        <div class="shadow-sm">
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Products</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Products - New</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Orders</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Order - Detail</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Customers</li>
+          </a>
+
+        </div>
       </div>
-      <div class="text-center">
-        <i class="fa-sharp fa-light fa-layer-group"></i>
+      <!-- button5 -->
+
+      <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample5" role="button" aria-expanded="false"
+        aria-controls="multiCollapseExample5">
+        <i class="fa-sharp fa-light fa-layer-group" style="color: #6c757d;"></i>
         <br>
-        <span>Pages</span>
+        <span class=" w-100" style="color: #6c757d;">User</span>
         <br>
         <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </a>
+      <div class="collapse multi-collapse" id="multiCollapseExample5">
+        <div class="shadow-sm">
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Login page</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Register</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Login v.2</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Register v.2</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Customers</li>
+          </a>
+
+        </div>
       </div>
-      <div class="text-center">
-        <i class="fa-sharp fa-light fa-user-vneck-hair"></i>
+      <!-- button6 -->
+
+      <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample6" role="button" aria-expanded="false"
+        aria-controls="multiCollapseExample6">
+        <i class="fa-light fa-sliders fa-rotate-270" style="color: #6c757d;"></i>
         <br>
-        <span>User</span>
+        <span class=" w-100" style="color: #6c757d;">Components</span>
         <br>
         <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </a>
+      <div class="collapse multi-collapse" id="multiCollapseExample6">
+        <div class="shadow-sm">
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Cards</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Calendar</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Gallery</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Loading buttons</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Maps</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Notifications</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Preloaders</li>
+          </a>
+        </div>
       </div>
-      <div class="text-center">
-        <i class="fa-light fa-sliders fa-rotate-270"></i>
+      <!-- button7 -->
+      <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample7" role="button" aria-expanded="false"
+        aria-controls="multiCollapseExample7">
+        <i class="fa-light fa-sliders fa-rotate-270" style="color: #6c757d;"></i>
         <br>
-        <span>Components</span>
+        <span class=" w-100" style="color: #6c757d;">Charts</span>
         <br>
         <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </a>
+      <div class="collapse multi-collapse" id="multiCollapseExample7">
+        <div class="shadow-sm">
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Charts</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Gauge+ Sparkline</li>
+          </a>
+        </div>
       </div>
-      <div class="text-center">
-        <i class="fa-light fa-chart-pie"></i>
+      <!-- button8 -->
+
+      <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample8" role="button" aria-expanded="false"
+        aria-controls="multiCollapseExample8">
+        <i class="fa-light fa-cabinet-filing" style="color: #6c757d;"></i>
         <br>
-        <span>Charts</span>
+        <span class=" w-100" style="color: #6c757d;">Forms</span>
         <br>
         <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </a>
+      <div class="collapse multi-collapse" id="multiCollapseExample8">
+        <div class="shadow-sm">
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Basic forms</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Advanced forms</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Files upload</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Text editor</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Validation</li>
+          </a>
+        </div>
       </div>
-      <div class="text-center">
-        <i class="fa-light fa-cabinet-filing"></i>
-        <br>
-        <span>Forms</span>
-        <br>
-        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
-      </div>
-      <div class="text-center">
-        <i class="fa-sharp fa-light fa-table-cells-large"></i>
-        <br>
-        <span>Tables</span>
-        <br>
-        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
-      </div>
-      <div class="m-4"><span class="cardText1 p-2">DOCS</span></div>
       
-      <div class="text-center">
-        <i class="fa-solid fa-arrows-left-right"></i>
+      <!-- button9 -->
+      <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample9" role="button" aria-expanded="false"
+        aria-controls="multiCollapseExample9">
+        <i class="fa-sharp fa-light fa-table-cells-large" style="color: #6c757d;"></i>
         <br>
-        <span>Introduction</span>
+        <span class=" w-100" style="color: #6c757d;">Tables</span>
         <br>
         <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </a>
+      <div class="collapse multi-collapse" id="multiCollapseExample9">
+        <div class="shadow-sm">
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Bootstrap tables</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Datatable</li>
+          </a>
+        </div>
       </div>
-      <div class="text-center">
-        <i class="fa-sharp fa-light fa-oven"></i>
+
+      <div class="m-4"><span class="cardText1 p-2">DOCS</span></div>
+
+      <div class="text-center mb-4">
+        <i class="fa-solid fa-arrows-left-right" style="color: #6c757d;"></i>
         <br>
-        <span>Directory Structure</span>
+        <span style="color: #6c757d;">Introduction</span>
         <br>
-        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+
       </div>
-      <div class="text-center">
-        <i class="fa-thin fa-keyboard"></i>
+      <div class="text-center mb-4">
+        <i class="fa-sharp fa-light fa-oven" style="color: #6c757d;"></i>
         <br>
-        <span>Gulp.js</span>
+        <span style="color: #6c757d;">Directory Structure</span>
         <br>
-        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+
       </div>
-      <div class="text-center">
-        <i class="fa-sharp fa-light fa-pen-ruler"></i>
+      <div class="text-center mb-4">
+        <i class="fa-thin fa-keyboard" style="color: #6c757d;"></i>
         <br>
-        <span>CSS</span>
+        <span style="color: #6c757d;">Gulp.js</span>
         <br>
-        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+
       </div>
-      <div class="text-center">
-        <i class="fa-light fa-medal"></i>
+      <!-- button10 -->
+      <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample10" role="button" aria-expanded="false"
+        aria-controls="multiCollapseExample10">
+        <i class="fa-sharp fa-light fa-pen-ruler" style="color: #6c757d;"></i>
         <br>
-        <span>Credits</span>
+        <span class=" w-100" style="color: #6c757d;">CSS</span>
         <br>
         <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+      </a>
+      <div class="collapse multi-collapse" id="multiCollapseExample10">
+        <div class="shadow-sm">
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">CSS Components</li>
+          </a>
+          <a href="#" class="text-decoration-none " style="color: #6c757d;">
+            <li class="list-unstyled p-2">Customizing CSS</li>
+          </a>
+        </div>
       </div>
-      <div class="text-center">
-        <i class="fa-light fa-circle-n"></i>
+
+      <div class="text-center my-4">
+        <i class="fa-light fa-medal" style="color: #6c757d;"></i>
         <br>
-        <span>Changelog</span>
+        <span style="color: #6c757d;">Credits</span>
         <br>
-        <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+
+      </div>
+      <div class="text-center mb-4">
+        <i class="fa-light fa-circle-n" style="color: #6c757d;"></i>
+        <br>
+        <span style="color: #6c757d;">Changelog</span>
+        <br>
+
       </div>
 
     </div>
-    <div class="container-fluid d-flex align-conten.t-start  flex-wrap h-100">
+
+    <div name="content" class="container-fluid d-flex align-conten.t-start flex-wrap h-100 flex-shrink-1">
       <div class="col-12 box_0 mt-4 mx-4">
         <h1>DEFAULT DASHBOARD</h1>
       </div>
@@ -514,15 +710,19 @@
                 <div class="p-4 d-flex justify-content-between ms-1 my-2 ">
                   <h6 class="d-inline-block m-0 lh-lg l-spacing-self fs-14-self">SALES BY CHANNEL</h6>
                   <div class="btn-group ">
-                    <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
-                      aria-expanded="false">
+                    <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                      data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="fa-solid fa-ellipsis-vertical"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
-                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
-                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
-                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                            class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                            class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                            class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                            class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
                   </div>
 
                 </div>
@@ -532,7 +732,8 @@
                   <div class="col-12 fs-6 fw-bolder text-body-tertiary l-spacing-self fs-14-self">TOTAL REVENUE</div>
                   <div class="col-12 text-primary fs-2 fw-bolder lh-">$19,200</div>
                   <div class="col-6 col-xl-5 fs-14-self fw-bold text-secondary">+$2,032 </div>
-                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg px-1 fw-bolder text-start"><i class="fa-solid fa-arrow-up" style="color: #03cfb7;"></i>19.5%</span></div>
+                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg px-1 fw-bolder text-start"><i
+                        class="fa-solid fa-arrow-up" style="color: #03cfb7;"></i>19.5%</span></div>
                 </div>
               </div>
               <div class="col-6 col-xl-4 white">
@@ -540,7 +741,8 @@
                   <div class="col-12  fw-bolder text-body-tertiary l-spacing-self fs-14-self">ORGANIC SEARCH</div>
                   <div class="col-12  fs-4">$19,200</div>
                   <div class="col-6 col-xl-5 fs-14-self fw-bold text-secondary ">+$2,123</div>
-                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg px-1 fw-bolder"><i class="fa-solid fa-arrow-up" style="color: #03cfb7;"></i>21.3%</span></div>
+                  <div class="col-5 p-0 text-bg-light fs-12-self"><span class="bg px-1 fw-bolder"><i
+                        class="fa-solid fa-arrow-up" style="color: #03cfb7;"></i>21.3%</span></div>
                 </div>
               </div>
               <div class="col-6 col-xl-4 white">
@@ -548,7 +750,8 @@
                   <div class="col-12  fw-bolder text-body-tertiary l-spacing-self fs-14-self">FACEBOOK ADS</div>
                   <div class="col-12  fs-4">$2,500</div>
                   <div class="col-6 col-xl-5 fs-14-self fw-bold text-secondary ">-$233</div>
-                  <div class="col-5  p-0 text-bg-light fs-12-self"><span class="bg-2 px-1 fw-bolder"><i class="fa-solid fa-arrow-down  " style="color: #dc3545;"></i>2.1%</span></div>
+                  <div class="col-5  p-0 text-bg-light fs-12-self"><span class="bg-2 px-1 fw-bolder"><i
+                        class="fa-solid fa-arrow-down  " style="color: #dc3545;"></i>2.1%</span></div>
                 </div>
               </div>
               <div class="col-12  white">
@@ -571,15 +774,19 @@
             <div class="p-4 d-flex justify-content-between  my-2 shadow">
               <h6 class="d-inline-block lh-lg ms-1 l-spacing-self fs-14-self">LATEST ACTIVITY</h6>
               <div class="btn-group">
-                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                  </button>
+                <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
-                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
-                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
-                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                        class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                        class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                        class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                  <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                        class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
                 </ul>
               </div>
             </div>
@@ -735,33 +942,38 @@
               <div class="p-4 d-flex justify-content-between ms-1 my-2 ">
                 <h6 class="d-inline-block m-0 lh-lg l-spacing-self fs-14-self">LATEST CONTRACTS</h6>
                 <div class="btn-group ">
-                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                          class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                          class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                          class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                          class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
                 </div>
 
               </div>
             </div>
             <div class="row py-4 row-gap-2">
-              
+
               <div class="col-3 col-md-2 pr-0 ">
-              
+
                 <select class="form-select form-select-sm w-100 ms-3 fs-12-self  " aria-label=".form-select-sm example">
-                  <option  value="1">Bulk Actions</option>
-                  <option  value="2">Delete</option>
+                  <option value="1">Bulk Actions</option>
+                  <option value="2">Delete</option>
                 </select>
-                
+
               </div>
               <div class="col-4 col-md-2 px-0 d-flex">
                 <button type="button" class="btn btn-outline-primary fs-12-self rounded-2 ms-2 lg-sm py-0">Apply
                 </button>
-                <select class="form-select form-select-sm w-50 ms-1 p-0 fs-12-self" aria-label=".form-select-sm example">
+                <select class="form-select form-select-sm w-50 ms-1 p-0 fs-12-self"
+                  aria-label=".form-select-sm example">
                   <option value="1">&nbsp;&nbsp;&nbsp;5</option>
                   <option value="2">&nbsp;&nbsp;10</option>
                   <option value="2">&nbsp;&nbsp;15</option>
@@ -770,46 +982,55 @@
                 </select>
               </div>
               <div class="col-5 col-md-5 fs-12-self lh-lg"> entries per page</div>
-              <div class="col-12 col-md-3 d-flex justify-content-end"> 
-                <input class="form-control ms-3 w-100 px-5 fs-12-self " type="search" placeholder="Search..." aria-label="Search">
+              <div class="col-12 col-md-3 d-flex justify-content-end">
+                <input class="form-control ms-3 w-100 px-5 fs-12-self " type="search" placeholder="Search..."
+                  aria-label="Search">
               </div>
             </div>
-            
+
             <div class="row ms-0 me-0 bg-self w-100 text-white py-3 minW-self">
               <div class="col-4 ps-4 fs-12-self fw-bolder  d-flex justify-content-between align-items-center">
-                   <span class="d-inline-block " >NAME</span>
-                  <div class="text-secondary pb-3">
-                    <div class="h-little-self"><i class=" fa-solid fa-caret-up d-inline-block active-white "></i></div>
-                    <div class="h-little-self"><i class="fa-solid fa-sort-down  d-inline-block active-white"></i></div>
-                  </div>
+                <span class="d-inline-block ">NAME</span>
+                <div class="text-secondary pb-3">
+                  <div class="h-little-self"><i class=" fa-solid fa-caret-up d-inline-block active-white "></i></div>
+                  <div class="h-little-self"><i class="fa-solid fa-sort-down  d-inline-block active-white"></i></div>
+                </div>
               </div>
               <div class="col-2 ps-0 fs-12-self fw-bolder d-flex justify-content-between align-items-center">
-                <span class="d-inline-block" >COMPANY</span>
-                  <div class="text-secondary pb-3">
-                    <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i></div>
-                    <div class="h-little-self"><i class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                <span class="d-inline-block">COMPANY</span>
+                <div class="text-secondary pb-3">
+                  <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i>
                   </div>
+                  <div class="h-little-self"><i
+                      class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                </div>
               </div>
               <div class="col-2 ps-0 fs-12-self fw-bolder d-flex justify-content-between align-items-center">
-                <span class="d-inline-block" >STATUS</span>
-                  <div class="text-secondary pb-3">
-                    <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i></div>
-                    <div class="h-little-self"><i class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                <span class="d-inline-block">STATUS</span>
+                <div class="text-secondary pb-3">
+                  <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i>
                   </div>
+                  <div class="h-little-self"><i
+                      class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                </div>
               </div>
               <div class="col-2 ps-0 fs-12-self fw-bolder d-flex justify-content-between align-items-center">
-                <span class="d-inline-block" >CONTRACT</span>
-                  <div class="text-secondary  pb-3">
-                    <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i></div>
-                    <div class="h-little-self"><i class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                <span class="d-inline-block">CONTRACT</span>
+                <div class="text-secondary  pb-3">
+                  <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i>
                   </div>
+                  <div class="h-little-self"><i
+                      class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                </div>
               </div>
               <div class="col-2 ps-0 pe-4 fs-12-self fw-bolder d-flex justify-content-between align-items-center">
-                <span class="d-inline-block" >DATE</span>
-                  <div class="text-secondary pb-3">
-                    <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i></div>
-                    <div class="h-little-self"><i class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                <span class="d-inline-block">DATE</span>
+                <div class="text-secondary pb-3">
+                  <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i>
                   </div>
+                  <div class="h-little-self"><i
+                      class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                </div>
               </div>
             </div>
             <div class="row fs-14-self py-3 border-bottom minW-self">
@@ -836,15 +1057,18 @@
               <div class="col-2 d-flex align-items-center justify-content-between">
                 <span class="p-2">2021/02/04</span>
                 <div class="btn-group ">
-                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
-                  </div>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                          class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                          class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                          class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                </div>
               </div>
             </div>
             <div class="row fs-14-self py-3 border-bottom minW-self">
@@ -873,16 +1097,19 @@
               <div class="col-2 d-flex align-items-center justify-content-between">
                 <span class=" p-2">2021/04/04</span>
                 <div class="btn-group ">
-                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                          class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                          class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                          class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
                 </div>
-                
+
 
               </div>
             </div>
@@ -912,25 +1139,28 @@
               <div class="col-2 d-flex align-items-center justify-content-between">
                 <span class="p-2">2021/04/09</span>
                 <div class="btn-group ">
-                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
-                  </div>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                          class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                          class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                          class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                </div>
               </div>
             </div>
-             <div class="row fs-14-self py-3 border-bottom minW-self">
+            <div class="row fs-14-self py-3 border-bottom minW-self">
               <div class="col-4 d-flex ps-3 ">
                 <div class="img-box">
                   <div class="image image2 fw-bolder">M</div>
                 </div>
                 <div class="ms-4">
                   <span class="fw-bolder">Meyers Swanson
-                    </span><br>meyersswanson@candecor.com
+                  </span><br>meyersswanson@candecor.com
                 </div>
               </div>
               <div class="col-2 d-flex">
@@ -951,16 +1181,19 @@
               <div class="col-2 d-flex align-items-center justify-content-between">
                 <span class=" p-2">2021/02/19</span>
                 <div class="btn-group ">
-                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                          class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                          class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                          class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
                 </div>
-                
+
 
               </div>
             </div>
@@ -976,7 +1209,7 @@
               <div class="col-2 d-flex">
                 <div class="ms-1">
                   <span class="fw-bolder">Capscreen
-                    </span><br>Beyerville<span></span>
+                  </span><br>Beyerville<span></span>
                 </div>
               </div>
               <div class="col-2 d-flex align-items-center">
@@ -991,33 +1224,38 @@
               <div class="col-2 d-flex align-items-center justify-content-between">
                 <span class="p-2">2021/12/22</span>
                 <div class="btn-group ">
-                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                  <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
-                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
-                  </div>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                          class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                          class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                    <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                          class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                </div>
               </div>
             </div>
-              <!-- NOW -->
+            <!-- NOW -->
             <div class="col-12 py-3 d-flex align-items-center justify-content-between ">
               <div class="px-2">Showing 21 to 25 of 30 entries</div>
               <div class="btn-toolbar mb-3 pe-3" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group me-2 " role="group" aria-label="First group">
-                  <button type="button" class="btn hover-grey fw-lighter"><i class="fa-solid fa-angle-left"></i></button>
+                  <button type="button" class="btn hover-grey fw-lighter"><i
+                      class="fa-solid fa-angle-left"></i></button>
                   <button type="button" class="btn hover-grey">1</button>
                   <button type="button" class="btn hover-grey">2</button>
                   <button type="button" class="btn hover-grey">3</button>
                   <button type="button" class="btn hover-grey">4</button>
                   <button type="button" class="btn hover-grey">5</button>
                   <button type="button" class="btn hover-grey">6</button>
-                  <button type="button" class="btn hover-grey fw-lighter"><i class="fa-solid fa-angle-right"></i></button>
+                  <button type="button" class="btn hover-grey fw-lighter"><i
+                      class="fa-solid fa-angle-right"></i></button>
                 </div>
               </div>
-            </div>  
+            </div>
           </div>
         </div>
 
@@ -1091,7 +1329,7 @@
         </div>
       </div>
       <div class="box_5 col-12 d-flex flex-column  flex-lg-row my-4">
-        <div class="box5 col-12 col-lg-4 mb-3 ">
+        <div class="box5 col-12 col-lg-4 mb-3 pe-4">
           <div class="card h-100 mx-1 ">
             <div class="card-header bg-white d-flex justify-content-between p-4">
               <span class="cardText3 ">PROJECT UPDATES</span>
@@ -1139,7 +1377,7 @@
             </div>
           </div>
         </div>
-        <div class="box5 col-12 col-lg-4 mb-3">
+        <div class="box5 col-12 col-lg-4 mb-3 pe-4">
           <div class="card h-100 mx-1 mb-2">
             <div class="card-header bg-white d-flex justify-content-between p-4">
               <span class="cardText3">CLOSED PROJECTS</span>
@@ -1191,8 +1429,8 @@
             </div>
           </div>
         </div>
-        <div class="box5 col-12 col-lg-4 mb-3">
-          <div class="card h-100 mx-1">
+        <div class="box5 col-12 col-lg-4 mb-3 pe-4">
+          <div class="card h-100 mx-1 ">
             <div class="card-header bg-white d-flex justify-content-between p-4">
               <span class="cardText3">TICKETS SOLVED</span>
               <i class="fa-solid fa-ellipsis-vertical" style="color: #949494;"></i>
@@ -1244,17 +1482,18 @@
       </div>
       <div class="bottomBox col-12 d-flex flex-wrap w-100">
         <div class="card w-100">
-          <div class="card-body" >
-            <p class="col-12 col-sm-6 botText1 align-content-center float-md-start">Your company © 2023</p>
-            <p class="col-12 col-sm-6 botText2 float-md-end">Version 1.3.2 </p>
+          <div class="card-body d-flex flex-wrap">
+            <p class="col-12 col-sm-6 botText1 align-content-center text-center text-md-start float-md-start">Your
+              company © 2023</p>
+            <p class="col-12 col-sm-6 text-md-end text-center text-body-tertiary ">Version 1.3.2 </p>
           </div>
         </div>
 
       </div>
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
