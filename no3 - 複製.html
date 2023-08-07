@@ -308,11 +308,21 @@
     }
 
     .w-90-self {
-      width: calc(90% - 115px);
+      width: calc(90% - 65px);
       /* margin: 0 auto; */
-      /* margin-left: 5%;
-      margin-right: 5%; */
+     
     }
+
+    @media screen and (max-width:1000px) {
+      .w-90-self {
+        width: calc(80% - 65px);
+        /* margin: 0 auto; */
+        /* margin-left:30px; */
+        /* margin-right: 5%; */ 
+      }
+
+    }
+
 
     .w-10-self {
       width: 115px;
@@ -384,7 +394,7 @@
     }
 
     .line-left-1 {
-      left: 22%;
+      left: 50%;
       height: 1460px;
     }
 
@@ -393,11 +403,14 @@
       height: 870px;
 
     }
-
+/* 
     .left-display {
       display: none !important;
+    } */
+    .right-display{
+      width:93%!important;
     }
-    
+
     .docBtn:focus {
       background-color: #7e85e7;
       color: white;
@@ -739,7 +752,7 @@
         </div>
       </div>
       
-        <div class="w-90-self mx-auto d-flex align-content-center flex-wrap px-0">
+        <div class="w-90-self mx-auto d-flex align-content-center flex-wrap px-0 justify-content-center">
           <div class="box_0 row d-flex w-100 mt-4">
             <h1 class="col-12 l-spacing-self text-dark-emphasis fw-light">DEFAULT DASHBOARD</h1>
           </div>
@@ -897,7 +910,7 @@
               </div>
             </div>
             <div class="box2 col-12 col-xl-3 p-3 py-4">
-              <div class="card rounded-4 ">
+              <div class="card rounded-4 h-100">
                 <div class="p-4 d-flex justify-content-between  my-2 shadow">
                   <h6 class="d-inline-block lh-lg m-0 l-spacing-self fs-14-self text-body-secondary">LATEST ACTIVITY</h6>
                   <div class="btn-group">
@@ -917,14 +930,15 @@
                     </ul>
                   </div>
                 </div>
-                <div class=" h-500-a overflow-x-hidden overflow-y-scroll fs-14-self position-relative">
-                  <div class=" bg-dark-subtle position-absolute  w-line line-left-1 z-1 d-none d-xl-block"></div>
-                  <div class=" bg-dark-subtle position-absolute  w-line line-left-2 z-1 d-xl-none"></div>
+                <div class=" h-500-a overflow-x-hidden overflow-y-scroll fs-14-self ">
+                  
+                  <!-- <div class=" bg-dark-subtle position-absolute  w-line line-left-2 z-1 d-xl-none"></div> -->
                   <ul class="mt-4 list-inline">
                     <div class="row mt-4">
                       <div class="col-2  col-xl-4  z-2">
-                        <div class="img-box ms-3">
+                        <div class="img-box ms-3 position-relative ">
                           <img class="image " src="./img/people/avatar-0.jpg">
+                          <div class=" bg-dark-subtle position-absolute  w-line line-left-1 z-1 d-none d-xl-block"></div>
                         </div>
                       </div>
                       <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Nielsen
@@ -1698,10 +1712,12 @@
   <script>
     let pic1 = document.querySelector('.pic1');
     let bac = document.querySelector('.bac');
+    let right = document.querySelector('.w-90-self');
 
     pic1.addEventListener('click', () => {
       console.log(bac.classList);
       bac.classList.toggle('d-none');
+      right.classList.toggle('right-display');
     })
 
   </script>
