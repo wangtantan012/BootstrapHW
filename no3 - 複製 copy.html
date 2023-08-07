@@ -130,9 +130,6 @@
     .textPurple {
       color: #838ae6;
     }
-    .textgrey{
-      color: #6c757d;
-    }
 
     .cardText1 {
       color: #6c757d;
@@ -143,6 +140,7 @@
     }
 
     .cardText3 {
+
       letter-spacing: 3px;
 
     }
@@ -340,12 +338,15 @@
         width:98%;
         min-width: 98%;
       }
-     
+      .d-flex-2{
+      display:none!important;
+      }
+      
     }
 
     .w-10-self {
       width: 115px;
-      display: none;
+      display: flex;
       /* min-width: 0px; */
     }
 
@@ -440,28 +441,11 @@
     .docBtn:active {
       background-color: #7e85e7;
       color: white;
-
-    }
-    i :active{
-      color: white;
     }
     .text-self{
       text-align: start!important;
     }  
-    .turn:active{
-      animation-name: turn1;
-      /* transform: rotate(180deg); */
-      animation-duration :1s;
-      animation-iteration-count:1;
-      /* animation-play-state:paused */
-      /* transition: 1s; */
-    }
 
-     @keyframes turn1{
-      0%{transform: rotate(180deg);}
-      100%{transform: rotate(180deg);};
-      /* 101%{transform: rotate(180deg);} */
-    } 
   </style>
 </head>
 
@@ -503,23 +487,23 @@
             
             <span style="color: #ffffff;">Dashboards</span>
             
-            <i class="fa-solid fa-angle-up fa-rotate-180 float-end lh-base turn" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-angle-up fa-rotate-180 float-end lh-base" style="color: #ffffff;"></i>
           </a>
           <div class="collapse multi-collapse " id="multiCollapseExample1">
             <div class="shadow-sm ">
-              <a href="#" class=" text-decoration-none textgrey" >
+              <a href="#" class=" text-decoration-none" style="color: #6c757d;">
                 <li class="p-2 docBtn" tabindex="1">Default</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class="p-2 docBtn" tabindex="1">CMS</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">E-commerce</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2">Projects</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Charts</li>
               </a>
             </div>
@@ -527,24 +511,24 @@
           <!-- button2 -->
           <a class="btn w-100 doc-change  d-flex flex-column" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false"
             aria-controls="multiCollapseExample2">
-            <i class="fa-regular fa-book-open textgrey" ></i>
+            <i class="fa-regular fa-book-open" style="color: #6c757d;"></i>
             
-            <span class="textgrey" >CMS</span>
+            <span style="color: #6c757d;">CMS</span>
             
-            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base textgrey" ></i>
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample2">
             <div class="shadow-sm w-100">
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Posts</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Add new post</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Categories</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Media library</li>
               </a>
             </div>
@@ -552,18 +536,18 @@
           <!-- button3 -->
           <a class="btn doc-change  d-flex flex-column w-100" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample3">
-            <i class="fa-regular fa-file-lines textgrey" ></i>
+            <i class="fa-regular fa-file-lines" style="color: #6c757d;"></i>
             
-            <span class="textgrey" >Widgets</span>
+            <span style="color: #6c757d;">Widgets</span>
             
-            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base textgrey" ></i>
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample3">
             <div class="shadow-sm  w-100">
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Stats</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Data</li>
               </a>
 
@@ -573,27 +557,27 @@
 
           <a class="btn doc-change w-100  d-flex flex-column" data-bs-toggle="collapse" href="#multiCollapseExample4" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample4">
-            <i class="fa-sharp fa-light fa-truck textgrey" ></i>
+            <i class="fa-sharp fa-light fa-truck" style="color: #6c757d;"></i>
             
-            <span class=" w-100 textgrey" >E-commerce</span>
+            <span class=" w-100" style="color: #6c757d;">E-commerce</span>
             
-            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base textgrey" ></i>
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample4">
             <div class="shadow-sm">
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Products</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Products - New</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Orders</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Order - Detail</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Customers</li>
               </a>
 
@@ -603,27 +587,27 @@
 
           <a class="btn doc-change w-100 d-flex flex-column " data-bs-toggle="collapse" href="#multiCollapseExample5" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample5">
-            <i class="fa-sharp fa-light fa-layer-group textgrey" ></i>
+            <i class="fa-sharp fa-light fa-layer-group" style="color: #6c757d;"></i>
             
-            <span class=" w-100 textgrey" >User</span>
+            <span class=" w-100" style="color: #6c757d;">User</span>
             
-            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base textgrey" ></i>
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample5">
             <div class="shadow-sm">
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Login page</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Register</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Login v.2</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Register v.2</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Customers</li>
               </a>
 
@@ -633,33 +617,33 @@
 
           <a class="btn doc-change w-100 d-flex flex-column " data-bs-toggle="collapse" href="#multiCollapseExample6" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample6">
-            <i class="fa-light fa-sliders fa-rotate-270 textgrey" ></i>
+            <i class="fa-light fa-sliders fa-rotate-270" style="color: #6c757d;"></i>
             
-            <span class=" w-100 textgrey" >Components</span>
+            <span class=" w-100" style="color: #6c757d;">Components</span>
             
-            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base textgrey" ></i>
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample6">
             <div class="shadow-sm">
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Cards</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Calendar</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Gallery</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Loading buttons</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Maps</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Notifications</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Preloaders</li>
               </a>
             </div>
@@ -667,18 +651,18 @@
           <!-- button7 -->
           <a class="btn doc-change  d-flex flex-column w-100" data-bs-toggle="collapse" href="#multiCollapseExample7" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample7">
-            <i class="fa-light fa-sharp fa-chart-pie textgrey" ></i>
+            <i class="fa-light fa-sharp fa-chart-pie" style="color: #6c757d;"></i>
             
-            <span class=" w-100 textgrey" >Charts</span>
+            <span class=" w-100" style="color: #6c757d;">Charts</span>
             
-            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base textgrey" ></i>
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample7">
             <div class="shadow-sm">
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Charts</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Gauge+ Sparkline</li>
               </a>
             </div>
@@ -687,27 +671,27 @@
 
           <a class="btn doc-change w-100 d-flex flex-column " data-bs-toggle="collapse" href="#multiCollapseExample8" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample8">
-            <i class="fa-light fa-cabinet-filing textgrey" ></i>
+            <i class="fa-light fa-cabinet-filing" style="color: #6c757d;"></i>
             
-            <span class=" w-100 textgrey" >Forms</span>
+            <span class=" w-100" style="color: #6c757d;">Forms</span>
             
-            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base textgrey" ></i>
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample8">
             <div class="shadow-sm">
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Basic forms</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Advanced forms</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Files upload</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Text editor</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Validation</li>
               </a>
             </div>
@@ -716,18 +700,18 @@
           <!-- button9 -->
           <a class="btn doc-change w-100  d-flex flex-column" data-bs-toggle="collapse" href="#multiCollapseExample9" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample9">
-            <i class="fa-sharp fa-light fa-table-cells-large textgrey" ></i>
+            <i class="fa-sharp fa-light fa-table-cells-large" style="color: #6c757d;"></i>
             
-            <span class=" w-100 textgrey" >Tables</span>
+            <span class=" w-100" style="color: #6c757d;">Tables</span>
             
-            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base textgrey" ></i>
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample9">
             <div class="shadow-sm">
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Bootstrap tables</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2 docBtn" tabindex="1">Datatable</li>
               </a>
             </div>
@@ -735,58 +719,58 @@
 
           <div class="m-4"><span class="cardText1 p-2">DOCS</span></div>
 
-          <div class="text-center mb-4  d-flex flex-column btn" tabindex="1" >
-            <i class="fa-solid fa-arrows-left-right textgrey" ></i>
+          <div class="text-center mb-4  d-flex flex-column">
+            <i class="fa-solid fa-arrows-left-right" style="color: #6c757d;"></i>
             
-            <span class="textgrey">Introduction</span>
-            
-
-          </div>
-          <div class="text-center mb-4  d-flex flex-column btn" tabindex="1">
-            <i class="fa-sharp fa-light fa-oven textgrey" ></i>
-            
-            <span class="textgrey">Directory Structure</span>
+            <span style="color: #6c757d;">Introduction</span>
             
 
           </div>
-          <div class="text-center mb-4  d-flex flex-column btn" tabindex="1">
-            <i class="fa-thin fa-keyboard textgrey"></i>
+          <div class="text-center mb-4  d-flex flex-column">
+            <i class="fa-sharp fa-light fa-oven" style="color: #6c757d;"></i>
             
-            <span class="textgrey">Gulp.js</span>
+            <span style="color: #6c757d;">Directory Structure</span>
+            
+
+          </div>
+          <div class="text-center mb-4  d-flex flex-column">
+            <i class="fa-thin fa-keyboard" style="color: #6c757d;"></i>
+            
+            <span style="color: #6c757d;">Gulp.js</span>
             
 
           </div>
           <!-- button10 -->
           <a class="btn doc-change w-100  d-flex flex-column" data-bs-toggle="collapse" href="#multiCollapseExample10" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample10">
-            <i class="fa-sharp fa-light fa-pen-ruler textgrey" ></i>
+            <i class="fa-sharp fa-light fa-pen-ruler" style="color: #6c757d;"></i>
             
-            <span class=" w-100 textgrey" >CSS</span>
+            <span class=" w-100" style="color: #6c757d;">CSS</span>
             
-            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base textgrey" ></i>
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base " style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample10">
             <div class="shadow-sm">
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2">CSS Components</li>
               </a>
-              <a href="#" class="text-decoration-none textgrey" >
+              <a href="#" class="text-decoration-none " style="color: #6c757d;">
                 <li class=" p-2">Customizing CSS</li>
               </a>
             </div>
           </div>
 
-          <div class="text-center my-4  d-flex flex-column  btn" tabindex="1">
-            <i class="fa-light fa-medal textgrey" ></i>
+          <div class="text-center my-4  d-flex flex-column">
+            <i class="fa-light fa-medal" style="color: #6c757d;"></i>
             
-            <span class="textgrey">Credits</span>
+            <span style="color: #6c757d;">Credits</span>
             
 
           </div>
-          <div class="text-center mb-4 d-flex flex-column  btn" tabindex="1">
-            <i class="fa-light fa-circle-n textgrey" ></i>
+          <div class="text-center mb-4 d-flex flex-column ">
+            <i class="fa-light fa-circle-n" style="color: #6c757d;"></i>
             
-            <span class="textgrey">Changelog</span>
+            <span style="color: #6c757d;">Changelog</span>
             
 
           </div>
@@ -1758,9 +1742,8 @@
     let pic1_2 = document.querySelector('.pic1-2');
     let listUnstyled = document.querySelector('.list-unstyled');
     let docChange = document.querySelectorAll('.doc-change');
-    let iCon = document.querySelectorAll('.fa-angle-up');
-
     pic1.addEventListener('click', () => {
+    
       bac.classList.toggle('d-flex');
       document.querySelector('.w-90-self').style.minWidth='calc(80% - 65px)';
       right.classList.toggle('right-display');
