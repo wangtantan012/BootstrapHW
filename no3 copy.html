@@ -5,49 +5,60 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/no3.css">
   <style>
     body {
+      box-sizing: border-box;
+      background-color: rgb(248, 249, 250);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      height: 100%;
       /* position: relative; */
+    }
+
+    html {
+      margin: 0;
+      box-sizing: border-box;
     }
 
     nav {
       background-color: white;
-      margin-bottom: 1rem;
-      /* position: absolute; */
-      /* z-index: 10; */
+      margin-bottom: .3rem;
+      position: relative;
+      z-index: 4;
     }
 
-    .icon {
-      /* display: ; */
-    }
+
 
     .pic1 {
-      background-image:  url(./img/1.png);
-      background-size: cover;
-      width: 15.75px;
-      height: 17.78px;
+      /* background-image: url(./img/1.png); */
+      /* background-size: cover; */
+      width: 29.75px;
+      height: 29.78px;
     }
 
-    .pic3 {
-      background-image: url(./img/3.png);
+    .pic3-4 {
+      /* background-image: url(./img/3.png);
       background-size: cover;
-      width: 23.99px;
+      background-repeat: no-repeat; */
+      width: 29.99px;
       height: 23.99px;
     }
 
-    .pic4 {
+    /*.pic4 {
       background-image: url(./img/4.png);
       background-size: cover;
-      width: 23.99px;
+      width: 29.99px;
       height: 23.99px;
-    }
+    } */
 
     .pic5 {
-      background-image:url(./img/5.png);
-      background-size: cover;
+      /* background-image: url(./img/5.png); */
+      /* background-size: cover; */
       width: 47.99px;
       height: 47.99px;
     }
@@ -96,31 +107,64 @@
     .card {
       border: none;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+
     }
 
     .purple {
       background-color: #c4c7f1c7;
     }
-    .textPurple{
+
+    .textPurple {
       color: #838ae6;
     }
-    .cardText1{
+
+    .cardText1 {
       color: #6c757d;
       opacity: 0.9;
+      font-size: 12px;
+      letter-spacing: 3px;
 
+    }
+
+    .cardText3 {
+
+      letter-spacing: 3px;
+
+    }
+
+    .cardText2 {
+      color: #6c757d;
+      font-weight: 400;
+      font-size: 14.4px;
+    }
+
+    .bacGreen {
+      background-color: #03cfb7;
+    }
+
+
+    .picBoxSize {
+      width: 30px;
+      height: 30px;
+    }
+
+    .iconSize {
+      width: 9px;
+      height: 15px;
     }
 
 
 
+    /* 新加入的style */
 
-   /* 新加入的style */
-
-    .organic, .facebook  {
+    .organic,
+    .facebook {
       display: -block;
-      width: 1rem;
-      height: 1rem;
+      width: 0.5rem;
+      height: 0.5rem;
       border-radius: 50%;
       background-color: rgb(70, 80, 221);
+      /* line-height: 54px; */
     }
 
 
@@ -129,363 +173,1485 @@
     }
 
     .bg {
-      background-color: rgb(48, 214, 213);
+      background-color: rgb(205, 245, 241);
       border-radius: 10%;
+      color: rgb(68, 207, 183);
     }
 
     .bg-2 {
       background-color: rgb(248, 215, 218);
       border-radius: 10%;
+      color: rgb(220, 53, 69);
     }
 
 
     .h-500-a {
-      height: 575px;
+      height: 100%;
+      max-height: 890px;
+      min-height: 0px;
+      /* width:100%; */
+      aspect-ratio: 6 / 15.7;
+
     }
 
-    .img-box{
-            width:48px;
-            height:48px;
-            border-radius: 50%;
-            background-color:white;
-        }
+    @media screen and (max-width:1200px) {
+      .h-500-a {
+        max-height: 150px;
+      }
+      
+    }
 
-    .image{
-            width:40px;
-            height:40px;
-            border-radius: 50%;
-            margin-top:4px;
-            margin-left:4px;
-        }
+    .img-box {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
 
-    .dropdown-toggle{
-          color: transparent;
-        }
+    }
+
+    .image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-top: 4px;
+      margin-left: 4px;
+    }
+
+    .image2 {
+      background-color: rgb(255, 243, 205);
+      color: rgb(255, 193, 7);
+      line-height: 40px;
+      text-align: center;
+    }
+    
+
+    .img-ms{
+      margin-left: -10px;
+    }
+
+    .fs-14-self {
+      font-size: 14px;
+    }
+
+    .fs-12-self {
+      font-size: 12px;
+    }
+
+    .l-spacing-self {
+      letter-spacing: .1rem;
+    }
+
+    .btn-self {
+      width: 32px;
+      height: 32px;
+      /* border-radius: 50%; */
+      background-color: white;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    .btn-self:hover {
+      background-color: #c4c7f1c7;
+    }
+
+    .dropdown-toggle::after {
+      display: none;
+    }
+
+    .bg-self {
+      background-color: rgb(52, 58, 64);
+    }
+
+    .active-white:active {
+      color: white;
+    }
+
+    .active-white:focus {
+      color: white;
+    }
+
+    .w-line{
+      width:1px;
+    }
+    .h-little-self {
+      height: 6px;
+    }
+
+    .h-little-self-2 {
+      height: 10px;
+    }
+
+    .orange-self {
+      background-color: rgb(255, 243, 205);
+      color: rgb(255, 193, 7);
+    }
+
+    .minW-self {
+      min-width: 880px;
+    }
+
+    .blue-self {
+      background-color: rgb(70, 80, 221);
+    }
+
+    .blue-self-subtle {
+      background-color: rgb(114, 123, 243);
+    }
+
+
+    .right-width{
+      width:calc(100% - 115px);
+    }    
+    .w-85-self {
+      width: 85%;
+      /* margin: 0 auto; */
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    .w-10-self {
+      width: 115px;
+      /* min-width: 0px; */
+    }
+
+    .w-15-self {
+      width: 15%;
+    }
+
+    .w-20-self {
+      width: 35%;
+    }
+
+    .w-93-self {
+      width: 93%;
+    }
+
+    .hover-grey {
+      border-radius: 0;
+      color: rgb(51, 51, 51);
+      font-weight: 400;
+    }
+
+    .hover-grey:hover {
+      background-color: rgb(217, 217, 217);
+    }
+
+    .hover-grey:active {
+      background-color: rgb(217, 217, 217);
+    }
+
+    .hover-grey:focus {
+      background-color: rgb(217, 217, 217);
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    .border-left-self {
+      border-left: 1.5px solid #dee2e6;
+    }
+
+    .hover-self:hover {
+      background-color: rgb(236, 236, 236);
+    }
+
+
+    .form-control:focus {
+      border-color: rgba(163, 168, 238, 0.5) !important;
+      box-shadow: 0 0 0 0.25rem rgba(163, 168, 238, 0.5) !important;
+
+    }
+
+    .form-control2 {
+      background-color: rgb(233, 236, 239);
+      width: 200px;
+    }
+
+    .form-control2:focus {
+      border-color: transparent !important;
+      box-shadow: 0 0 0 0.25rem transparent !important;
+      background-color: rgb(233, 236, 239);
+    }
+
+    .top-self {
+      top: 35%;
+    }
+
+    .line-left-1{
+      left:22% ;
+      height:1460px;
+    }
+    .line-left-2{
+      left:4.8% ;
+      height:870px;
+
+    }
   </style>
 </head>
 
 <body>
   <nav
-    class="container-fluid col-12 shadow p-3 align-items-center bg-body-tertiary rounded d-flex justify-content-between">
-    <div class="pic1"></div>
-    <div class="text">
-      <span class="text1">BUBBLY</span>
-      <span class="text2">DASHBOARD</span>
+    class="container-fluid shadow position-relative p-3 w-100 align-items-center bg-body-tertiary rounded d-flex justify-content-between">
+    <div class="w-50 cursor-pointer">
+      <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="true" aria-controls="collapseWidthExample">
+        <img class="pic1 me-3" src="./img/1.png">
+      </button>
+      <span class="text text1 d-md-none">BUBBLY</span>
+      <span class="text text2 d-none d-sm-inline d-md-none">DASHBOARD</span>
     </div>
-    <div class="icon d-flex   align-items-center ms-5 justify-content-between">
-      <input type="text" name="search" placeholder="Search">
-      <div class="pic3"></div>
-      <div class="pic4"></div>
-      <div class="pic5"></div>
+    <div class="text d-none d-md-block position-absolute top-50 start-50  translate-middle">
+      <span class="text1">BUBBLY</span>
+      <span class="text2 d-none d-sm-inline">DASHBOARD</span>
+    </div>
+    <div class="icon d-flex align-items-center  w-20-self justify-content-end">
+      <div class="d-none d-lg-flex position-relative  mx-1">
+        <input type="search" name="search" placeholder="Search" class=" form-control form-control2">
+        <i
+          class="fa-solid fa-magnifying-glass position-absolute  end-0 top-50 translate-middle-y pe-1 cursor-pointer"></i>
+      </div>
+      <div class="w d-flex justify-content-end align-items-center">
+        <div class="mx-1 cursor-pointer"><img class="pic3-4" src="./img/3.png"></div>
+        <div class="mx-1 cursor-pointer"><img class="pic3-4" src="./img/4.png"></div>
+        <div class=" mx-1 cursor-pointer"><img class="pic5" src="./img/5.png"></div>
+      </div>
     </div>
   </nav>
-  <div class="container-fluid bac d-flex h-100">
-    <div class="docs shadow p-3 mb-5 bg-body-tertiary "></div>
-    <div class="container-fluid d-flex align-conten.t-start  flex-wrap h-100">
-      <div class="col-12 box_0">
-        <h1>DEFAULT DASHBOARD</h1>
+  <div class="container-fluid d-flex w-100 p-0">
+    <div class=" bac d-flex w-10-self bg-white collapse  collapse-horizontal" id="collapseWidthExample">
+      <div name="docs" class=" shadow list-unstyled bg-body-tertiary  text-center ">
+        <div class="m-4"><span class="cardText1 p-2">MAIN</span></div>
+        <!-- button1 -->
+        <a class="btn btn-primary blue-self w-100" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample1">
+          <i class="fa-sharp fa-light fa-house-chimney" style="color: #ffffff;"></i>
+          <br>
+          <span style="color: #ffffff;">Dashboards</span>
+          <br>
+          <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #ffffff;"></i>
+        </a>
+        <div class="collapse multi-collapse " id="multiCollapseExample1">
+          <div class="shadow-sm ">
+            <a href="#" class=" w-100 h-25 d-inline-block blue-self-subtle p-2 text-decoration-none">
+              <li class="" style="color: #ffffff;">Default</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">CMS</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">E-commerce</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Projects</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Charts</li>
+            </a>
+          </div>
+        </div>
+        <!-- button2 -->
+        <a class="btn w-100" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false"
+          aria-controls="multiCollapseExample2">
+          <i class="fa-regular fa-book-open" style="color: #6c757d;"></i>
+          <br>
+          <span style="color: #6c757d;">CMS</span>
+          <br>
+          <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+        </a>
+        <div class="collapse multi-collapse" id="multiCollapseExample2">
+          <div class="shadow-sm w-100">
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Posts</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2 w-100">Add new post</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Categories</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Media library</li>
+            </a>
+          </div>
+        </div>
+        <!-- button3 -->
+        <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample3">
+          <i class="fa-regular fa-file-lines" style="color: #6c757d;"></i>
+          <br>
+          <span style="color: #6c757d;">Widgets</span>
+          <br>
+          <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+        </a>
+        <div class="collapse multi-collapse" id="multiCollapseExample3">
+          <div class="shadow-sm  w-100">
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Stats</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Data</li>
+            </a>
+
+          </div>
+        </div>
+        <!-- button4 -->
+
+        <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample4" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample4">
+          <i class="fa-sharp fa-light fa-truck" style="color: #6c757d;"></i>
+          <br>
+          <span class=" w-100" style="color: #6c757d;">E-commerce</span>
+          <br>
+          <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+        </a>
+        <div class="collapse multi-collapse" id="multiCollapseExample4">
+          <div class="shadow-sm">
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Products</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Products - New</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Orders</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Order - Detail</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Customers</li>
+            </a>
+
+          </div>
+        </div>
+        <!-- button5 -->
+
+        <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample5" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample5">
+          <i class="fa-sharp fa-light fa-layer-group" style="color: #6c757d;"></i>
+          <br>
+          <span class=" w-100" style="color: #6c757d;">User</span>
+          <br>
+          <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+        </a>
+        <div class="collapse multi-collapse" id="multiCollapseExample5">
+          <div class="shadow-sm">
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Login page</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Register</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Login v.2</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Register v.2</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Customers</li>
+            </a>
+
+          </div>
+        </div>
+        <!-- button6 -->
+
+        <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample6" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample6">
+          <i class="fa-light fa-sliders fa-rotate-270" style="color: #6c757d;"></i>
+          <br>
+          <span class=" w-100" style="color: #6c757d;">Components</span>
+          <br>
+          <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+        </a>
+        <div class="collapse multi-collapse" id="multiCollapseExample6">
+          <div class="shadow-sm">
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Cards</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Calendar</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Gallery</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Loading buttons</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Maps</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Notifications</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Preloaders</li>
+            </a>
+          </div>
+        </div>
+        <!-- button7 -->
+        <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample7" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample7">
+          <i class="fa-light fa-sliders fa-rotate-270" style="color: #6c757d;"></i>
+          <br>
+          <span class=" w-100" style="color: #6c757d;">Charts</span>
+          <br>
+          <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+        </a>
+        <div class="collapse multi-collapse" id="multiCollapseExample7">
+          <div class="shadow-sm">
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Charts</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Gauge+ Sparkline</li>
+            </a>
+          </div>
+        </div>
+        <!-- button8 -->
+
+        <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample8" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample8">
+          <i class="fa-light fa-cabinet-filing" style="color: #6c757d;"></i>
+          <br>
+          <span class=" w-100" style="color: #6c757d;">Forms</span>
+          <br>
+          <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+        </a>
+        <div class="collapse multi-collapse" id="multiCollapseExample8">
+          <div class="shadow-sm">
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Basic forms</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Advanced forms</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Files upload</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Text editor</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Validation</li>
+            </a>
+          </div>
+        </div>
+
+        <!-- button9 -->
+        <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample9" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample9">
+          <i class="fa-sharp fa-light fa-table-cells-large" style="color: #6c757d;"></i>
+          <br>
+          <span class=" w-100" style="color: #6c757d;">Tables</span>
+          <br>
+          <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+        </a>
+        <div class="collapse multi-collapse" id="multiCollapseExample9">
+          <div class="shadow-sm">
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Bootstrap tables</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Datatable</li>
+            </a>
+          </div>
+        </div>
+
+        <div class="m-4"><span class="cardText1 p-2">DOCS</span></div>
+
+        <div class="text-center mb-4">
+          <i class="fa-solid fa-arrows-left-right" style="color: #6c757d;"></i>
+          <br>
+          <span style="color: #6c757d;">Introduction</span>
+          <br>
+
+        </div>
+        <div class="text-center mb-4">
+          <i class="fa-sharp fa-light fa-oven" style="color: #6c757d;"></i>
+          <br>
+          <span style="color: #6c757d;">Directory Structure</span>
+          <br>
+
+        </div>
+        <div class="text-center mb-4">
+          <i class="fa-thin fa-keyboard" style="color: #6c757d;"></i>
+          <br>
+          <span style="color: #6c757d;">Gulp.js</span>
+          <br>
+
+        </div>
+        <!-- button10 -->
+        <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample10" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample10">
+          <i class="fa-sharp fa-light fa-pen-ruler" style="color: #6c757d;"></i>
+          <br>
+          <span class=" w-100" style="color: #6c757d;">CSS</span>
+          <br>
+          <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+        </a>
+        <div class="collapse multi-collapse" id="multiCollapseExample10">
+          <div class="shadow-sm">
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">CSS Components</li>
+            </a>
+            <a href="#" class="text-decoration-none " style="color: #6c757d;">
+              <li class=" p-2">Customizing CSS</li>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center my-4">
+          <i class="fa-light fa-medal" style="color: #6c757d;"></i>
+          <br>
+          <span style="color: #6c757d;">Credits</span>
+          <br>
+
+        </div>
+        <div class="text-center mb-4">
+          <i class="fa-light fa-circle-n" style="color: #6c757d;"></i>
+          <br>
+          <span style="color: #6c757d;">Changelog</span>
+          <br>
+
+        </div>
+
       </div>
-      <div class="col-12 box_1 row d-flex p-2 h-100">
-        <div class="col-12 col-sm-6 col-lg-3 my-4">
-          <div class=" h-90 card w-100">
-            <div class=" card-header d-flex justify-content-between">
-              <div><span class="pb-1 text-danger fs-5">$10,500</span>
-                <br>
-                <span class="cardText1 mt-4">EARNING</span>
+    </div>
+        <div name="content" class="w-100 align-content-start flex-wrap  flex-shrink-1">
+          <div class="col-12 box_0 mt-4">
+            <h1 class="l-spacing-self text-dark-emphasis fw-light">DEFAULT DASHBOARD</h1>
+          </div>
+          <div class=" box_1 row d-flex p-0 ">
+            <div class="col-12 col-sm-6 col-lg-3 my-4">
+              <div class=" h-90 card w-100">
+                <div class=" card-header d-flex justify-content-between p-4">
+                  <div><span class="pb-1 text-danger fs-5">$10,500</span>
+                    <br>
+                    <span class="cardText1 mt-4 ">EARNINGS</span>
+                  </div>
+                  <img src="./img/box1.png" alt="" class="picBoxSize my-auto ">
+                </div>
+                <div class="card-body bg-danger-subtle rounded-bottom text-danger d-flex justify-content-between p-4">20%
+                  increase
+                  <i class="fa-solid fa-caret-up fa-2xs my-auto mx-3" style="color: #dc3545;"></i>
+                </div>
+
               </div>
-              <img src="./img/box1.png" alt="" class="W-10">
             </div>
-            <div class="card-body bg-danger-subtle rounded-bottom text-danger">20% increase </div>
+            <div class="col-12 col-sm-6 col-lg-3 my-4">
+              <div class="h-90 card w-100">
+                <div class="card-header d-flex justify-content-between p-4 ">
+                  <div>
+                    <span class="text-primary fs-5 ">584</span>
+                    <br>
+                    <span class="cardText1">READERS</span>
+                  </div>
+                  <img src="./img/box2.png" alt="" class="picBoxSize my-auto ">
 
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3 my-4">
-          <div class="h-90 card w-100">
-            <div class="card-header d-flex justify-content-between">
-              <div>
-                <span class="text-primary fs-5">584</span>
-                <br>
-                <span  class="cardText1" >READERS</span>
+                </div>
+                <div class="card-body bg-primary-subtle rounded-bottom text-primary d-flex justify-content-between p-4">
+                  3% increase
+                  <i class="fa-solid fa-caret-up fa-2xs my-auto mx-3" style="color: #0d6efd;"></i>
+                </div>
               </div>
-              <img src="./img/box2.png" alt="">
-
             </div>
-            <div class="card-body bg-primary-subtle rounded-bottom text-primary">
-              3% increase
-            </div>
-          </div>
-        </div>
+            <div class="col-12 col-sm-6 col-lg-3 my-4">
+              <div class="h-90 card w-100">
+                <div class="card-header d-flex justify-content-between p-4">
+                  <div>
+                    <span class="textPurple fs-5">876</span>
+                    <br>
+                    <span class="cardText1">BOOKMARKS</span>
+                  </div>
 
-        <div class="col-12 col-sm-6 col-lg-3 my-4">
-          <div class="h-90 card w-100">
-            <div class="card-header d-flex justify-content-between ">
-              <div>
-                <span class="textPurple fs-5">876</span>
-              <br>
-              <span  class="cardText1">BOOKMARKS</span>
+                  <img src="./img/box3.png" alt="" class="picBoxSize my-auto">
+                </div>
+
+                <div class="card-body purple rounded-bottom textPurple d-flex justify-content-between p-4">
+                  10% increase
+                  <i class="fa-solid fa-caret-up fa-2xs my-auto mx-3" style="color: #838ae6;"></i>
+                </div>
               </div>
-              
-              <img src="./img/box3.png" alt="">
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 my-4">
+              <div class="h-90 card w-100">
+                <div class="card-header d-flex justify-content-between p-4">
+                  <div>
+                    <span class="text-success fs-5">3,500</span>
+                    <br>
+                    <span class="cardText1">VISITORS</span>
+                  </div>
+
+                  <img src="./img/box4.png" alt="" class="picBoxSize my-auto ">
+                </div>
+
+                <div class="card-body bg-success-subtle rounded-bottom text-success d-flex justify-content-between p-4">
+                  5% decrease
+                  <i class="fa-solid fa-caret-up fa-2xs fa-rotate-180 my-auto mx-3" style="color: #198754;"></i>
+                </div>
+              </div>
             </div>
 
-            <div class="card-body purple rounded-bottom textPurple">
-              10% increase
-            </div>
           </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3 my-4">
-          <div class="h-90 card w-100">
-            <div class="card-header d-flex justify-content-between">
-              <div>
-                <span class="text-success fs-5">3,500</span>
-                <br>
-                <span  class="cardText1 fs-6">VISITORS</span></div>
-              
-              <img src="./img/box4.png" alt="">
-            </div>
-            
-            <div class="card-body bg-success-subtle rounded-bottom text-success">
-              5% decrease
-            </div>
-          </div>
-        </div>
+          <div class="box_2  row  d-flex  ">
+            <div class="box2 col-12 col-xl-9 px-3 py-4 ">
+              <div class="card rounded-4 h-100">
+                <div class="row px-2">
+                  <div class="col-12 white border-bottom">
+                    <div class="p-3 d-flex justify-content-between  my-2 ">
+                      <h6 class="d-inline-block m-0 lh-lg l-spacing-self fs-14-self  text-body-secondary">&nbsp;SALES BY
+                        CHANNEL</h6>
+                      <div class="btn-group ">
+                        <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                                class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                                class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                      </div>
 
-      </div>
-      <div class="box_2 col-12 row d-flex">
-        <div class="box2 col-12 col-xl-9">
-          <div class="card rounded-4">
-            <div class="row px-2">
-              <div class="col-12 white ">
-                <div class="p-3 d-flex justify-content-between ms-3 mt-2 mb-2 ">
-                  <h6 class="d-inline-block">SALES BY CHANNEL</h6>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-3  white py-md-5 pt-5 pb-0">
+                    <div class="row ms-2 mt-0 mb-2 ">
+                      <div class="col-12 fs-6 fw-bolder text-body-tertiary l-spacing-self fs-14-self">TOTAL REVENUE</div>
+                      <div class="col-12 text-primary fs-2 fw-bolder ">$19,200</div>
+                      <div class="col-6 col-xl-6 fs-14-self fw-medium text-secondary pe-0">+$2,032 </div>
+                      <div class="col-6 p-0 text-bg-light fs-12-self px-0"><span class="bg py-1 px-2 fw-bolder text-start"><i
+                            class="fa-solid fa-arrow-up " style="color: #03cfb7;"></i>19.5%</span></div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 white pt-sm-5 pt-1">
+                    <div class="row ms-2 my-2  border-left-self">
+                      <div class="col-12  fw-medium text-body-tertiary l-spacing-self fs-14-self opacity-75">ORGANIC SEARCH
+                      </div>
+                      <div class="col-12  fs-4">$19,200</div>
+                      <div class="col-6 col-xl-6 fs-14-self fw-medium text-secondary pe-0 ">+$2,123</div>
+                      <div class="col-6 p-0 text-bg-light fs-12-self"><span class="bg py-1 px-2 fw-bolder"><i
+                            class="fa-solid fa-arrow-up px-0"></i>21.3%</span></div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 white pt-md-5 pt-1 pb-5">
+                    <div class="row ms-2 my-2 border-left-self">
+                      <div class="col-12  fw-medium text-body-tertiary l-spacing-self fs-14-self opacity-75">FACEBOOK ADS
+                      </div>
+                      <div class="col-12  fs-4">$2,500</div>
+                      <div class="col-6 col-xl-6 fs-14-self fw-medium text-secondary pe-0 ">-$233</div>
+                      <div class="col-6  p-0 text-bg-light fs-12-self px-0"><span class="bg-2 py-1 px-2 fw-bolder"><i
+                            class="fa-solid fa-arrow-down p-0 " style="color: #dc3545;"></i>2.1%</span></div>
+                    </div>
+                  </div>
+                  <div class="d-none d-md-flex col-md-3 white pt-md-5 pb-5 justify-content-end align-items-center">
+                    <div class="d-flex my-2 justify-content-end pe-4">
+                      <img class="w-50" src="./img/profit.png">
+                    </div>
+                  </div>
+
+
+                  <div class="col-12  white">
+                    <div class="p-3 bar-chart"><img src="./img/barchart.png" class="w-100"></div>
+                  </div>
+
+                  <ul class="mt-4  d-flex justify-content-center   text-center">
+                    <li class="d-flex me-3 align-items-center ">
+                      <div class="organic me-1"></div>
+                      <div>Organic Search</div>
+                    </li>
+                    <li class="d-flex me-3 align-items-center ">
+                      <div class="facebook me-1"> </div>
+                      <div>Facebook Ads</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="box2 col-12 col-xl-3 p-3 py-4">
+              <div class="card rounded-4 ">
+                <div class="p-4 d-flex justify-content-between  my-2 shadow">
+                  <h6 class="d-inline-block lh-lg m-0 l-spacing-self fs-14-self text-body-secondary">LATEST ACTIVITY</h6>
                   <div class="btn-group">
-                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-
+                    <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                      <li><a class="dropdown-item" href="#"> Expand</a></li>
-                      <li><a class="dropdown-item" href="#">Minimize</a></li>
-                      <li><a class="dropdown-item" href="#"> Reload</a></li>
-                      <li><a class="dropdown-item" href="#">Remove</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                            class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                            class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                            class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                            class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
                     </ul>
                   </div>
+                </div>
+                <div class=" h-500-a overflow-x-hidden overflow-y-scroll fs-14-self position-relative">
+                  <div class=" bg-dark-subtle position-absolute  w-line line-left-1 z-1 d-none d-xl-block"></div>
+                  <div class=" bg-dark-subtle position-absolute  w-line line-left-2 z-1 d-xl-none"></div>
+                  <ul class="mt-4 list-inline">
+                    <div class="row mt-4">
+                      <div class="col-2  col-xl-4  z-2">
+                        <div class="img-box ms-3">
+                          <img class="image " src="./img/people/avatar-0.jpg">
+                        </div>
+                      </div>
+                      <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Nielsen
+                          Cobb&nbsp;</span>subscribed to your
+                        newsletter.<span class="text-secondary"><br>
+                          3m ago</span></div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-2 col-xl-4   z-2">
+                        <div class="img-box ms-3">
+                          <img class="image" src="./img/people/avatar-1.jpg">
+                        </div>
+                      </div>
+                      <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Margret Cote
+                          &nbsp;</span>liked your post 🎉
+                        <span class="text-secondary"><br>4m ago</span>
+                      </div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-2 col-xl-4   z-2">
+                        <div class="img-box ms-3">
+                          <img class="image" src="./img/people/avatar-2.jpg">
+                        </div>
+                      </div>
+                      <div class="col-9 col-xl-7 ms-3 text-start text-break">
+                        <span class="fw-bolder">Rachel Vinson &nbsp;</span> placed an order.
+                        <span class="text-secondary"><br>5m ago</span>
+                      </div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-2 col-xl-4   z-2">
+                        <div class="img-box ms-3">
+                          <img class="image" src="./img/people/avatar-3.jpg">
+                        </div>
+                      </div>
+                      <div class="col-9 ms-3 col-xl-7 text-start text-break"><span class="fw-bolder">Gabrielle
+                          Aguirre&nbsp;</span> commented on "How to
+                        season your new grill."
+                        <span class="text-secondary"><br>6m ago</span>
+                      </div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-2 col-xl-4   z-2">
+                        <div class="img-box ms-3">
+                          <img class="image" src="./img/people/avatar-4.jpg">
+                        </div>
+                      </div>
+                      <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Spears
+                          Collier&nbsp;</span> subscribed to your
+                        newsletter.
+                        <span class="text-secondary"><br>7m ago</span>
+                      </div>
+                    </div>
 
-                </div>
-              </div>
-              <div class="col-4 white">
-                <div class="row ms-3">
-                  <div class="col-12 fs-5 fw-bolder text-secondary">TOTAL REVENUE</div>
-                  <div class="col-12 text-primary fs-2 fw-bolder">$19,200</div>
-                  <div class="col-6 fs-6">+$2,032 </div>
-                  <div class="col-6 text-bg-light fs-6"><span class="bg">19.5%</span></div>
-                </div>
-              </div>
-              <div class="col-4 white">
-                <div class="row  mt-2 mb-2">
-                  <div class="col-12 fs-6 fw-bolder text-black-50">ORGANIC SEARCH</div>
-                  <div class="col-12  fs-4">$19,200</div>
-                  <div class="col-6 fs-6">+$2,032 </div>
-                  <div class="col-6 text-bg-light fs-6"><span class="bg">19.5%</span></div>
-                </div>
-              </div>
-              <div class="col-4 white">
-                <div class="row  mt-2 mb-2">
-                  <div class="col-12 fs-6 fw-bolder text-black-50">ORGANIC SEARCH</div>
-                  <div class="col-12  fs-4">$19,200</div>
-                  <div class="col-6 fs-6">+$2,032 </div>
-                  <div class="col-6 text-bg-light fs-6"><span class="bg-2">19.5%</span></div>
-                </div>
-              </div>
-              <div class="col-12  white">
-                <div class="p-3 bar-chart"><img src="./img/barchart.png" class="w-100"></div>
-              </div>
+                    <div class="row mt-4">
+                      <div class="col-2 col-xl-4   z-2">
+                        <div class="img-box ms-3 ">
+                          <img class="image" src="./img/people/avatar-5.jpg">
+                        </div>
+                      </div>
+                      <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Keisha Thomas&nbsp;
+                        </span>liked your post 🎉
+                        <span class="text-secondary"><br>8m ago</span>
+                      </div>
+                    </div>
 
-              <ul class="mt-4  d-flex justify-content-center  text-center">
-                <li class="d-flex me-2">
-                  <div class="organic"></div>Organic Search
-                </li>
-                <li class="d-flex me-2">
-                  <div class="facebook"> </div>Facebook Ads
-                </li>
-              </ul>
+                    <div class="row mt-4">
+                      <div class="col-2 col-xl-4   z-2">
+                        <div class="img-box ms-3">
+                          <img class="image" src="./img/people/avatar-6.jpg">
+                        </div>
+                      </div>
+                      <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Elisabeth
+                          Key&nbsp;</span>placed an order.
+                        <span class="text-secondary"><br>9m ago</span>
+                      </div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-2 col-xl-4   z-2">
+                        <div class="img-box ms-3">
+                          <img class="image" src="./img/people/avatar-7.jpg">
+                        </div>
+                      </div>
+                      <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Patel
+                          Mack&nbsp;</span>commented on "How to season
+                        your new grill."
+                        <span class="text-secondary"><br> 10m ago</span>
+                      </div>
+                      .
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-2 col-xl-4   z-2">
+                        <div class="img-box ms-3 ">
+                          <img class="image" src="./img/people/avatar-8.jpg">
+                        </div>
+                      </div>
+                      <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Erika
+                          Whitaker&nbsp;</span>subscribed to your
+                        newsletter.<br><span class="text-secondary">11m ago</span>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col-2 col-xl-4   z-2">
+                          <div class="img-box ms-3">
+                            <img class="image" src="./img/people/avatar-9.jpg">
+                          </div>
+                        </div>
+                        <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Meyers
+                            Swanson&nbsp;</span> liked your post 🎉
+                          <span class="text-secondary"> <br>12m ago</span>
+                        </div>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col-2 col-xl-4   z-2">
+                          <div class="img-box ms-3">
+                            <img class="image" src="./img/people/avatar-10.jpg">
+                          </div>
+                        </div>
+                        <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Townsend
+                            Sloan</span>&nbsp;placed an order.
+                          <span class="text-secondary"><br>13m ago</span>
+                        </div>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col-2 col-xl-4   z-2">
+                          <div class="img-box ms-3">
+                            <img class="image" src="./img/people/avatar-11.jpg">
+                          </div>
+                        </div>
+                        <div class="col-9 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Millicent
+                            Henry</span>&nbsp;commented on "How to
+                          season your new grill."
+                          <span class="text-secondary"> <br>14m ago</span>
+                        </div>
+                      </div>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="box2 col-12 col-xl-3 ">
-          <div class="card rounded-4">
-            <div class="p-3 d-flex justify-content-between ms-3 mt-2 mb-2 ">
-              <h6 class="d-inline-block">LATEST ACTIVITY</h6>
-              <div class="btn-group">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
-                  aria-expanded="false">
+          <div class="box_3 row d-flex m-0  w-100 pt-4">
+            <div class="col-12 p-0">
+              <div class="card w-100 rounded-4 overflow-hidden ">
+                <div class="row ">
+                  <div class="col-12 shadow">
+                    <div class="p-4 d-flex justify-content-between ms-1 my-2 ">
+                      <h6 class="d-inline-block m-0 lh-lg l-spacing-self fs-14-self text-body-secondary">LATEST CONTRACTS</h6>
+                      <div class="btn-group ">
+                        <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                                class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                                class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                      </div>
 
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="#"> Expand</a></li>
-                  <li><a class="dropdown-item" href="#">Minimize</a></li>
-                  <li><a class="dropdown-item" href="#"> Reload</a></li>
-                  <li><a class="dropdown-item" href="#">Remove</a></li>
-                </ul>
+                    </div>
+                  </div>
+                  <div class="row py-4 row-gap-2">
+
+                    <div class="col-3 col-md-2 pr-0 ">
+
+                      <select class="form-select form-select-sm w-100 ms-3 fs-12-self form-control  "
+                        aria-label=".form-select-sm example">
+                        <option value="1">Bulk Actions</option>
+                        <option value="2">Delete</option>
+                      </select>
+
+                    </div>
+                    <div class="col-4 col-md-2 px-0 d-flex">
+                      <button type="button" class="btn btn-outline-primary fs-12-self rounded-2 ms-2 lg-sm py-0">Apply
+                      </button>
+                      <select class="form-select form-select-sm w-50 ms-1 p-0 fs-12-self form-control"
+                        aria-label=".form-select-sm example">
+                        <option value="1">&nbsp;&nbsp;&nbsp;5</option>
+                        <option value="2">&nbsp;&nbsp;10</option>
+                        <option value="2">&nbsp;&nbsp;15</option>
+                        <option value="2">&nbsp;&nbsp;20</option>
+                        <option value="2">&nbsp;&nbsp;25</option>
+                      </select>
+                    </div>
+                    <div class="col-5 col-md-5 fs-12-self lh-lg"> entries per page</div>
+                    <div class="col-12 col-md-3 d-flex justify-content-end">
+                      <input class="form-control ms-3 w-100  fs-12-self " type="search" placeholder="Search..."
+                        aria-label="Search">
+                    </div>
+                  </div>
+
+                  <div class="row ms-0 me-0 bg-self w-100 text-white py-3 minW-self cursor-pointer">
+                    <div class="col-4 ps-4 fs-12-self fw-bolder  d-flex justify-content-between align-items-center">
+                      <span class="d-inline-block ">NAME</span>
+                      <div class="text-secondary pb-3">
+                        <div class="h-little-self"><i class=" fa-solid fa-caret-up d-inline-block active-white "></i></div>
+                        <div class="h-little-self"><i class="fa-solid fa-sort-down  d-inline-block active-white"></i></div>
+                      </div>
+                    </div>
+                    <div class="col-2 ps-0 fs-12-self fw-bolder d-flex justify-content-between align-items-center">
+                      <span class="d-inline-block">COMPANY</span>
+                      <div class="text-secondary pb-3">
+                        <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i>
+                        </div>
+                        <div class="h-little-self"><i
+                            class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                      </div>
+                    </div>
+                    <div class="col-2 ps-0 fs-12-self fw-bolder d-flex justify-content-between align-items-center">
+                      <span class="d-inline-block">STATUS</span>
+                      <div class="text-secondary pb-3">
+                        <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i>
+                        </div>
+                        <div class="h-little-self"><i
+                            class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                      </div>
+                    </div>
+                    <div class="col-2 ps-0 fs-12-self fw-bolder d-flex justify-content-between align-items-center">
+                      <span class="d-inline-block">CONTRACT</span>
+                      <div class="text-secondary  pb-3">
+                        <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i>
+                        </div>
+                        <div class="h-little-self"><i
+                            class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                      </div>
+                    </div>
+                    <div class="col-2 ps-0 pe-4 fs-12-self fw-bolder d-flex justify-content-between align-items-center">
+                      <span class="d-inline-block">DATE</span>
+                      <div class="text-secondary pb-3">
+                        <div class="h-little-self"><i class="fa-solid fa-caret-up fs-12-self d-inline-block active-white"></i>
+                        </div>
+                        <div class="h-little-self"><i
+                            class="fa-solid fa-sort-down fs-12-self d-inline-block active-white"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row fs-14-self py-3 border-bottom minW-self hover-self">
+                    <div class="col-4 d-flex ps-3 ">
+                      <div class="img-box ms-4">
+                        <img class="image" src="./img/people/avatar-10.jpg">
+                      </div>
+                      <div class="ms-4"><span class="fw-bolder">Merrill Garrett</span><br>merrillgarrett@affluex.com
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex">
+                      <div class="ms-1"><span class="fw-bolder">Affluex</span><br><span>Utting</span>
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                      <span class="fs-12-self px-1 orange-self rounded">●&nbsp;On Hold</span>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                      <span class=" p-2">48%</span>
+                      <div class="d-flex bg-body-secondary h-little-self w-75 rounded">
+                        <div class="d-flex blue-self h-little-self w-50 rounded-start"></div>
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex align-items-center justify-content-between">
+                      <span class="p-2">2021/02/04</span>
+                      <div class="btn-group ">
+                        <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                                class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row fs-14-self py-3 border-bottom minW-self hover-self">
+                    <div class="col-4 d-flex ps-3 ">
+                      <div class="img-box ms-4">
+                        <div class="image image2 fw-bolder">L</div>
+                      </div>
+                      <div class="ms-4">
+                        <span class="fw-bolder">Lester Roach</span><br>lesterroach@applica.com
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex">
+                      <div class="ms-1">
+                        <span class="fw-bolder">Applica</span><br>Coventry<span></span>
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                      <span class="fs-12-self px-1 bg-2 rounded">●&nbsp;Closed</span>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                      <span class=" p-2">22%</span>
+                      <div class="d-flex bg-body-secondary h-little-self w-75 rounded">
+                        <div class="d-flex blue-self h-little-self w-25 rounded-start"></div>
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex align-items-center justify-content-between">
+                      <span class=" p-2">2021/04/04</span>
+                      <div class="btn-group ">
+                        <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                                class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <div class="row fs-14-self py-3 border-bottom minW-self hover-self">
+                    <div class="col-4 d-flex ps-3 ">
+                      <div class="img-box ms-4">
+                        <img class="image" src="./img/people/avatar-2.jpg">
+                      </div>
+                      <div class="ms-4"><span class="fw-bolder">Millicent Henry
+                        </span><br>millicenthenry@balooba.com
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex">
+                      <div class="ms-1">
+                        <span class="fw-bolder">Balooba</span><br><span> Caron</span>
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                      <span class="fs-12-self px-1 bg rounded">●&nbsp;In Progress</span>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                      <span class="p-2">77%</span>
+                      <div class="d-flex bg-body-secondary h-little-self w-75 rounded">
+                        <div class="d-flex blue-self h-little-self w-75 rounded-start"></div>
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex align-items-center justify-content-between">
+                      <span class="p-2">2021/04/09</span>
+                      <div class="btn-group ">
+                        <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                                class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row fs-14-self py-3 border-bottom minW-self hover-self">
+                    <div class="col-4 d-flex ps-3 ">
+                      <div class="img-box ms-4">
+                        <div class="image image2 fw-bolder">M</div>
+                      </div>
+                      <div class="ms-4">
+                        <span class="fw-bolder">Meyers Swanson
+                        </span><br>meyersswanson@candecor.com
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex">
+                      <div class="ms-1">
+                        <span class="fw-bolder">Candecor
+                        </span><br>Finderne<span></span>
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                      <span class="fs-12-self px-1 bg-2 rounded">●&nbsp;Closed</span>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                      <span class="p-2">14%</span>
+                      <div class="d-flex bg-body-secondary h-little-self w-75 rounded">
+                        <div class="d-flex blue-self h-little-self w-15-self rounded-start"></div>
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex align-items-center justify-content-between">
+                      <span class=" p-2">2021/02/19</span>
+                      <div class="btn-group ">
+                        <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                                class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <div class="row fs-14-self py-3 border-bottom minW-self hover-self">
+                    <div class="col-4 d-flex ps-3 ">
+                      <div class="img-box ms-4 ">
+                        <img class="image" src="./img/people/avatar-4.jpg">
+                      </div>
+                      <div class="ms-4">
+                        <span class="fw-bolder">Garza Shaw</span><br>garzashaw@capscreen.com
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex">
+                      <div class="ms-1">
+                        <span class="fw-bolder">Capscreen
+                        </span><br>Beyerville<span></span>
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                      <span class="fs-12-self px-1 orange-self rounded">●&nbsp;On Hold</span>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                      <span class="p-2">93%</span>
+                      <div class="d-flex bg-body-secondary h-little-self w-75 rounded">
+                        <div class="d-flex blue-self h-little-self w-93-self rounded-start"></div>
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex align-items-center justify-content-between">
+                      <span class="p-2">2021/12/22</span>
+                      <div class="btn-group ">
+                        <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                                class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a></li>
+                          <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                                class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- NOW -->
+                  <div class="row py-3 mb-3 align-items-center justify-content-between ">
+                    <div class="ps-5 col-12 col-md-5 ">Showing 26 to 30 of 30 entries</div>
+                    <div class="btn-toolbar  pe-3 col-11 col-md-7 d-flex justify-content-end  align-items-center"
+                      role="toolbar" aria-label="Toolbar with button groups">
+                      <div class="btn-group me-2 " role="group" aria-label="First group">
+                        <button type="button" class="btn hover-grey fw-lighter">
+                          <i class="fa-solid fa-angle-left"></i>
+                        </button>
+                        <button type="button" class="btn hover-grey">1</button>
+                        <button type="button" class="btn hover-grey">2</button>
+                        <button type="button" class="btn hover-grey">3</button>
+                        <button type="button" class="btn hover-grey">4</button>
+                        <button type="button" class="btn hover-grey">5</button>
+                        <button type="button" class="btn hover-grey">6</button>
+                        <button type="button" class="btn hover-grey fw-lighter">
+                          <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="h-500-a overflow-x-hidden overflow-y-scroll">
-              <ul class="mt-4 list-inline ">
-                <div class="row mt-4">
-                  <div class="col-1  col-xl-4 ">
-                    <div class="img-box ms-3">
-                      <img class="image " src="./img/people/avatar-0.jpg" >
-                    </div>
-                  </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Nielsen Cobb&nbsp;</span>subscribed to your
-                    newsletter.<span class="text-secondary"><br>
-                      3m ago</span></div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
-                    <div class="img-box ms-3">
-                      <img class="image" src="./img/people/avatar-1.jpg" >
-                    </div>
-                  </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Margret Cote &nbsp;</span>liked your post 🎉
-                    <span class="text-secondary"><br>4m ago</span>
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
-                    <div class="img-box ms-3">
-                      <img class="image" src="./img/people/avatar-2.jpg" >
-                    </div>
-                  </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break">
-                    <span class="fw-bolder">Rachel Vinson &nbsp;</span> placed an order.
-                    <span class="text-secondary"><br>5m ago</span>
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
-                    <div class="img-box ms-3">
-                      <img class="image" src="./img/people/avatar-3.jpg" >
-                    </div>
-                  </div>
-                  <div class="col-10 ms-3 col-xl-7 text-start text-break"><span class="fw-bolder">Gabrielle Aguirre&nbsp;</span> commented on "How to
-                    season your new grill."
-                    <span class="text-secondary"><br>6m ago</span>
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
-                    <div class="img-box ms-3">
-                      <img class="image" src="./img/people/avatar-4.jpg" >
-                    </div>
-                  </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Spears Collier&nbsp;</span> subscribed to your
-                    newsletter.
-                    <span class="text-secondary"><br>7m ago</span>
-                  </div>
-                </div>
+          </div>
 
-                <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
-                    <div class="img-box ms-3 ">
-                      <img class="image" src="./img/people/avatar-5.jpg" >
+          <div class="box_4 row  d-flex flex-wrap my-4">
+            <div class="box4 col-12 col-md-6 pt-3 ">
+              <div class="card my-2 h-100">
+                <div class="card-body row ms-0">
+                  <div class="col-12 col-sm-5 my-auto flex-column ">
+                    <span class="mb-3 fs-2 fw-bolder">625</span>
+                    <br>
+                    <span class="mb-3 cardText3">NEW CUSTOMERS</span>
+                    <div class="progress h-little-self-2" role="progressbar" aria-label="Basic example" aria-valuenow="50"
+                      aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar h-little-self-2 bacGreen" style="width: 60%"></div>
                     </div>
                   </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Keisha Thomas&nbsp;
-                    </span>liked your post 🎉
-                    <span class="text-secondary"><br>8m ago</span>
+                  <div class="col-12 col-sm-7 row m-auto">
+                    <div class="col-6 col-sm-6 text-center ">
+                      <span class="fs-4 fw-bold ">254</span>
+                      <br>
+                      <span class="cardText2">Affiliates</span>
+                      <hr>
+                      <span class="cardText2">+123</span>
+                    </div>
+                    <div class="col-6 col-sm-6 text-center">
+                      <span class="fs-4 fw-bold">328</span>
+                      <br>
+                      <span class="cardText2">SEM</span>
+                      <hr>
+                      <span class="cardText2">+144</span>
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="box4 col-12 col-md-6  pt-5 pt-md-3 ">
+              <div class="card h-100 my-2">
+                <div class="card-body d-flex flex-column flex-sm-row">
+                  <div class="col-12 col-sm-1 position-relative">
+                    <i class="fa-solid fa-arrow-down fa-lg position-absolute top-self start-50 "
+                      style="color: #dc3545;"></i>
+                  </div>
+                  <div class="col-12 col-sm-5 my-auto flex-column">
+                    <span class="fs-2 fw-bold">1,112</span>
+                    <br>
+                    <span class="cardText2">Affiliate Sales</span>
+                    <br>
+                    <div class="progress h-little-self-2" role="progressbar" aria-label="Basic example" aria-valuenow="50"
+                      aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar h-little-self-2 bg-danger" style="width: 75%"></div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-1 position-relative">
+                    <i class="fa-solid fa-arrow-down fa-rotate-180 fa-lg position-absolute top-self start-50"
+                      style="color: #03cfb7;"></i>
+                  </div>
+                  <div class="col-12 col-sm-5 my-auto flex-column">
+                    <span class="fs-2 fw-bold">258</span>
+                    <br>
+                    <span class="cardText2">Ads Sales</span>
+                    <br>
+                    <div class="progress h-little-self-2" role="progressbar" aria-label="Basic example" aria-valuenow="50"
+                      aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar h-little-self-2 bacGreen" style="width: 50% "></div>
+                    </div>
 
-                <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
-                    <div class="img-box ms-3">
-                      <img class="image" src="./img/people/avatar-6.jpg" >
-                    </div>
-                  </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Elisabeth Key&nbsp;</span>placed an order.
-                    <span class="text-secondary"><br>9m ago</span>
                   </div>
                 </div>
-                <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
-                    <div class="img-box ms-3">
-                      <img class="image" src="./img/people/avatar-7.jpg" >
-                    </div>
-                  </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Patel Mack&nbsp;</span>commented on "How to season
-                    your new grill."
-                    <span class="text-secondary"><br> 10m ago</span>
-                  </div>
-                  .
-                </div>
-                <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
-                    <div class="img-box ms-3 ">
-                      <img class="image" src="./img/people/avatar-8.jpg" >
-                    </div>
-                  </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Erika Whitaker&nbsp;</span>subscribed to your
-                    newsletter.<br><span class="text-secondary">11m ago</span>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
-                    <div class="img-box ms-3">
-                      <img class="image" src="./img/people/avatar-9.jpg" >
-                    </div>
-                  </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Meyers Swanson&nbsp;</span> liked your post 🎉
-                    <span class="text-secondary"> <br>12m ago</span>
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
-                    <div class="img-box ms-3">
-                      <img class="image" src="./img/people/avatar-10.jpg" >
-                    </div>
-                  </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Townsend Sloan</span>&nbsp;placed an order.
-                    <span class="text-secondary"><br>13m ago</span>
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-1 col-xl-4">
-                    <div class="img-box ms-3">
-                      <img class="image" src="./img/people/avatar-11.jpg" >
-                    </div>
-                  </div>
-                  <div class="col-10 col-xl-7 ms-3 text-start text-break"><span class="fw-bolder">Millicent Henry</span>&nbsp;commented on "How to
-                    season your new grill."
-                    <span class="text-secondary"> <br>14m ago</span>
-                  </div>
-                </div>
-              </ul>
+              </div>
             </div>
           </div>
+          <div class="box_5 row d-flex flex-column  flex-lg-row my-4">
+            <div class="box5 col-12 col-lg-4 mb-3 pt-1 pt-md-2 ">
+              <div class="card me-1 ">
+                <div class="card-header bg-white d-flex justify-content-between p-4">
+                  <span class="cardText3 ">PROJECT UPDATES</span>
+                  <div class="btn-group ">
+                    <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                            class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                            class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                            class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                            class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between my-3">
+                    <span class="fw-bold">Publish New Theme</span>
+                    <span class="fs-6 text-body-tertiary">10 mins ago</span>
+                  </div>
+                  <div class="">
+                    <img class="img-box image shadow border border-1 border-white" src="./img/people/avatar-0.jpg" alt="">
+                    <img class="img-box image shadow border border-1 border-white img-ms" src="./img/people/avatar-1.jpg" alt="">
+                  </div>
+                  <div class="d-flex justify-content-between my-3">
+                    <span class="fw-bold">Internal Linkbuilding</span>
+                    <span class="fs-6 text-body-tertiary">2 hours ago</span>
+                  </div>
+                  <div class="">
+                    <img class="img-box image shadow border border-1 border-white " src="./img/people/avatar-1.jpg" alt="">
+                    <img class="img-box image shadow border border-1 border-white img-ms" src="./img/people/avatar-2.jpg" alt="">
+                    <img class="img-box image shadow border border-1 border-white img-ms" src="./img/people/avatar-3.jpg" alt="">
+                    <img class="img-box image shadow border border-1 border-white img-ms" src="./img/people/avatar-4.jpg" alt="">
+                  </div>
+                  <div class="d-flex justify-content-between my-3">
+                    <span class="fw-bold">New Writer Onboarding</span>
+                    <span class="fs-6 text-body-tertiary">3 days ago</span>
+                  </div>
+                  <div class="">
+                    <img class="img-box image shadow border border-1 border-white " src="./img/people/avatar-2.jpg" alt="">
+                    <img class="img-box image shadow border border-1 border-white img-ms" src="./img/people/avatar-3.jpg" alt="">
+                    <img class="img-box image shadow border border-1 border-white img-ms" src="./img/people/avatar-4.jpg" alt="">
+                  </div>
+                  <div class="d-flex justify-content-between my-3">
+                    <span class="fw-bold">Blog Post Drafts</span>
+                    <span class="fs-6 text-body-tertiary">5 days ago</span>
+                  </div>
+                  <div class="">
+                    <img class="img-box image shadow border border-1 border-white" src="./img/people/avatar-3.jpg" alt="">
+                    <img class="img-box image shadow border border-1 border-white img-ms" src="./img/people/avatar-4.jpg" alt="">
+                    <img class="img-box image shadow border border-1 border-white img-ms" src="./img/people/avatar-5.jpg" alt="">
+                    <img class="img-box image shadow border border-1 border-white img-ms" src="./img/people/avatar-6.jpg" alt="">
+                    <img class="img-box image shadow border border-1 border-white img-ms" src="./img/people/avatar-7.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box5 col-12 col-lg-4 mb-3 pt-4 pt-md-2 mx-0 ">
+              <div class="col-12 p-0 h-100">
+                <div class="card h-100 mx-1 mb-2">
+                  <div class="card-header bg-white d-flex justify-content-between p-4">
+                    <span class="cardText3">CLOSED PROJECTS</span>
+                    <div class="btn-group ">
+                      <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                              class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                        <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                              class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                        <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                              class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                        <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                              class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                    </div>
+                  </div>
+                  <div class="card-body d-flex flex-column ">
+                    <img src="./img/chart1.JPG" alt="">
+                    <div>
+                      <div class="text-center">
+                        <span class="text-body-tertiary">TOTAL CLOSED PROJECTS</span>
+
+                        <div>
+                          <span class="fw-bold me-1">2,235</span>
+                          <span>+128</span>
+                          <span class="bg-success-subtle rounded-2 px-2 bg">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            21.3%
+                          </span>
+                        </div>
+                        <br>
+                        <div class="text-center d-flex flex-row flex-wrap justify-content-center">
+                          <div class="mx-3">
+                            <i class="fa-solid fa-circle fa-2xs" style="color: #005eff;"></i>
+                            <span>Sandra</span>
+                            <br>
+                            <span>250</span>
+                          </div>
+                          <div class="mx-3">
+                            <i class="fa-solid fa-circle fa-2xs" style="color: #005eff9d;"></i>
+                            <span>Becky</span>
+                            <br>
+                            <span>50</span>
+                          </div>
+                          <div class="mx-3">
+                            <i class="fa-solid fa-circle fa-2xs" style="color: #005eff62;"></i>
+                            <span>Julie</span>
+                            <br>
+                            <span>100</span>
+                          </div>
+                          <div class="mx-3">
+                            <i class="fa-solid fa-circle fa-2xs" style="color: #005eff36;"></i>
+                            <span>Romero</span>
+                            <br>
+                            <span>40</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box5 col-12 col-lg-4 mb-3 pt-4 pt-md-2 ">
+              <div class="card h-100 ms-1 ">
+                <div class="card-header bg-white d-flex justify-content-between p-4">
+                  <span class="cardText3">TICKETS SOLVED</span>
+                  <div class="btn-group ">
+                    <button type="button" class="btn border-0 rounded-circle text-secondary btn-self dropdown-toggle"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                            class="fa-solid fa-maximize fs-14-self"></i>&nbsp;&nbsp;Expand</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                            class="fa-regular fa-window-minimize"></i>&nbsp;&nbsp;Minimize</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"> <i
+                            class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;Reload</a></li>
+                      <li><a class="dropdown-item text-light-emphasis  fs-14-self lh-lg" href="#"><i
+                            class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;Remove</a></li>
+                  </div>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <img src="./img/chart2.JPG" alt="" class="mt-3">
+                  <div class="text-center">
+                    <span class="text-body-tertiary">TICKETS SOLVED</span>
+
+                    <div>
+                      <span class="fw-bold me-1">530</span>
+                      <span>-85</span>
+                      <span class="bg-danger-subtle rounded-2 px-2 bg-2">
+                        <i class="fa-solid fa-arrow-down fa-sm"></i>
+                        -15.6%
+                      </span>
+                    </div>
+                    <br>
+                    <div class="text-center d-flex flex-row flex-wrap justify-content-center">
+                      <div class="mx-3">
+                        <i class="fa-solid fa-circle fa-2xs" style="color: #660ff1;"></i>
+                        <span>John</span>
+                        <br>
+                        <span>300</span>
+                      </div>
+                      <div class="mx-3">
+                        <i class="fa-solid fa-circle fa-2xs" style="color:#660ff1ad;"></i>
+                        <span>Mark</span>
+                        <br>
+                        <span>50</span>
+                      </div>
+                      <div class="mx-3">
+                        <i class="fa-solid fa-circle fa-2xs" style="color: #660ff157;"></i>
+                        <span>Frank</span>
+                        <br>
+                        <span>100</span>
+                      </div>
+                      <div class="mx-3">
+                        <i class="fa-solid fa-circle fa-2xs" style="color:#660ff12c;"></i>
+                        <span>Danny</span>
+                        <br>
+                        <span>80</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottomBox col-12 d-flex flex-wrap w-100  pt-2">
+            <div class="card w-100">
+              <div class="card-body d-flex flex-wrap">
+                <p class="col-12 col-sm-6 botText1 align-content-center text-center text-md-start float-md-start">Your
+                  company © 2023</p>
+                <p class="col-12 col-sm-6 text-md-end text-center text-body-tertiary ">Version 1.3.2 </p>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
-      <div class="box_3 col-12  d-flex"></div>
-      
-      <div class="box_4 col-12 d-flex">
-        <div class="box4 col-12 col-md-6 "></div>
-        <div class="box4 col-12 col-md-6 "></div>
-      </div>
-      <div class="box_5 col-12 d-flex">
-        <div class="box5 col-12 col-lg-4 "></div>
-        <div class="box5 col-12 col-lg-4 "></div>
-        <div class="box5 col-12 col-lg-4 "></div>
-      </div>
-      <div class="bottomBox col-12 d-flex flex-wrap">
-        <p class="col-12 col-sm-6 botText1 align-content-center float-md-start">Your company © 2023</p>
-        <p class="col-12 col-sm-6 botText2 float-md-end">Version 1.3.2 </p>
-      </div>
-
-
-
-
-    </div>
-
+     
   </div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
@@ -493,18 +1659,3 @@
 </body>
 
 </html>
-
-btn border-0 text-secondary btn-self
-
-.btn-self{
-  width: 32px;
-  height:32px;
-  border-radius: 50%;
-  background-color: transparent;
-  border:none;
-}
-
-.btn-self:hover{
-  
-  
-}
