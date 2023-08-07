@@ -33,7 +33,19 @@
       z-index: 4;
     }
 
+    .btn:active{
+      background-color: rgb(70,80,221);
+      color:white!important;
+    }
+    
+    .btn:focus{
+      background-color: rgb(70,80,221);
+      color:white!important;
+    }
 
+    .btn a i:active{
+      color:white!important;
+    }
 
     .pic1 {
       /* background-image: url(./img/1.png); */
@@ -315,10 +327,7 @@
 
     @media screen and (max-width:1000px) {
       .w-90-self {
-        width: calc(80% - 65px);
-        /* margin: 0 auto; */
-        /* margin-left:30px; */
-        /* margin-right: 5%; */ 
+        width:93%!;
       }
 
     }
@@ -326,6 +335,7 @@
 
     .w-10-self {
       width: 115px;
+      display: none;
       /* min-width: 0px; */
     }
 
@@ -403,12 +413,11 @@
       height: 870px;
 
     }
-/* 
-    .left-display {
-      display: none !important;
-    } */
+    .d-flex-2{
+      width: 250px !important;;
+    }
     .right-display{
-      width:93%!important;
+        width: calc(80% - 65px)!important;
     }
 
     .docBtn:focus {
@@ -419,7 +428,9 @@
       background-color: #7e85e7;
       color: white;
     }
-           
+    .text-self{
+      text-align: start!important;
+    }  
 
   </style>
 </head>
@@ -429,7 +440,8 @@
     <nav
       class="container-fluid shadow position-relative p-3 w-100 align-items-center bg-body-tertiary rounded d-flex justify-content-between">
       <div class="cursor-pointer">
-        <img class="pic1 me-3" src="./img/1.png">
+        <img class="pic1 me-3 d-xl-none" src="./img/1.png">
+        <img class="pic1 me-3 d-none d-xl-flex pic1-2" src="./img/1.png">
         <span class="text text1 d-md-none">BUBBLY</span>
         <span class="text text2 d-none d-sm-inline d-md-none">DASHBOARD</span>
       </div>
@@ -451,17 +463,17 @@
       </div>
     </nav>
     <div class="container-fluid d-flex  p-0">
-      <div class=" bac d-flex w-10-self bg-white ">
-        <div name="docs" class=" shadow list-unstyled bg-body-tertiary  text-center ">
+      <div class=" bac d-xl-flex w-10-self bg-white ">
+        <div name="docs" class=" shadow list-unstyled bg-body-tertiary ">
           <div class="m-4"><span class="cardText1 p-2">MAIN</span></div>
           <!-- button1 -->
-          <a class="btn btn-primary blue-self w-100" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+          <a  class="btn btn-primary blue-self w-100 doc-change d-flex flex-column" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample1">
             <i class="fa-sharp fa-light fa-house-chimney" style="color: #ffffff;"></i>
-            <br>
+            
             <span style="color: #ffffff;">Dashboards</span>
-            <br>
-            <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #ffffff;"></i>
+            
+            <i class="fa-solid fa-angle-up fa-rotate-180 float-end lh-base" style="color: #ffffff;"></i>
           </a>
           <div class="collapse multi-collapse " id="multiCollapseExample1">
             <div class="shadow-sm ">
@@ -483,13 +495,13 @@
             </div>
           </div>
           <!-- button2 -->
-          <a class="btn w-100" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false"
+          <a class="btn w-100 doc-change  d-flex flex-column" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false"
             aria-controls="multiCollapseExample2">
             <i class="fa-regular fa-book-open" style="color: #6c757d;"></i>
-            <br>
+            
             <span style="color: #6c757d;">CMS</span>
-            <br>
-            <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+            
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample2">
             <div class="shadow-sm w-100">
@@ -508,13 +520,13 @@
             </div>
           </div>
           <!-- button3 -->
-          <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button"
+          <a class="btn doc-change  d-flex flex-column w-100" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample3">
             <i class="fa-regular fa-file-lines" style="color: #6c757d;"></i>
-            <br>
+            
             <span style="color: #6c757d;">Widgets</span>
-            <br>
-            <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+            
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample3">
             <div class="shadow-sm  w-100">
@@ -529,13 +541,13 @@
           </div>
           <!-- button4 -->
 
-          <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample4" role="button"
+          <a class="btn doc-change w-100  d-flex flex-column" data-bs-toggle="collapse" href="#multiCollapseExample4" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample4">
             <i class="fa-sharp fa-light fa-truck" style="color: #6c757d;"></i>
-            <br>
+            
             <span class=" w-100" style="color: #6c757d;">E-commerce</span>
-            <br>
-            <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+            
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample4">
             <div class="shadow-sm">
@@ -559,13 +571,13 @@
           </div>
           <!-- button5 -->
 
-          <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample5" role="button"
+          <a class="btn doc-change w-100 d-flex flex-column " data-bs-toggle="collapse" href="#multiCollapseExample5" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample5">
             <i class="fa-sharp fa-light fa-layer-group" style="color: #6c757d;"></i>
-            <br>
+            
             <span class=" w-100" style="color: #6c757d;">User</span>
-            <br>
-            <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+            
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample5">
             <div class="shadow-sm">
@@ -589,13 +601,13 @@
           </div>
           <!-- button6 -->
 
-          <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample6" role="button"
+          <a class="btn doc-change w-100 d-flex flex-column " data-bs-toggle="collapse" href="#multiCollapseExample6" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample6">
             <i class="fa-light fa-sliders fa-rotate-270" style="color: #6c757d;"></i>
-            <br>
+            
             <span class=" w-100" style="color: #6c757d;">Components</span>
-            <br>
-            <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+            
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample6">
             <div class="shadow-sm">
@@ -623,13 +635,13 @@
             </div>
           </div>
           <!-- button7 -->
-          <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample7" role="button"
+          <a class="btn doc-change  d-flex flex-column w-100" data-bs-toggle="collapse" href="#multiCollapseExample7" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample7">
-            <i class="fa-light fa-sliders fa-rotate-270" style="color: #6c757d;"></i>
-            <br>
+            <i class="fa-light fa-sharp fa-chart-pie" style="color: #6c757d;"></i>
+            
             <span class=" w-100" style="color: #6c757d;">Charts</span>
-            <br>
-            <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+            
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample7">
             <div class="shadow-sm">
@@ -643,13 +655,13 @@
           </div>
           <!-- button8 -->
 
-          <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample8" role="button"
+          <a class="btn doc-change w-100 d-flex flex-column " data-bs-toggle="collapse" href="#multiCollapseExample8" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample8">
             <i class="fa-light fa-cabinet-filing" style="color: #6c757d;"></i>
-            <br>
+            
             <span class=" w-100" style="color: #6c757d;">Forms</span>
-            <br>
-            <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+            
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample8">
             <div class="shadow-sm">
@@ -672,13 +684,13 @@
           </div>
 
           <!-- button9 -->
-          <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample9" role="button"
+          <a class="btn doc-change w-100  d-flex flex-column" data-bs-toggle="collapse" href="#multiCollapseExample9" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample9">
             <i class="fa-sharp fa-light fa-table-cells-large" style="color: #6c757d;"></i>
-            <br>
+            
             <span class=" w-100" style="color: #6c757d;">Tables</span>
-            <br>
-            <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+            
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base" style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample9">
             <div class="shadow-sm">
@@ -693,35 +705,35 @@
 
           <div class="m-4"><span class="cardText1 p-2">DOCS</span></div>
 
-          <div class="text-center mb-4">
+          <div class="text-center mb-4  d-flex flex-column">
             <i class="fa-solid fa-arrows-left-right" style="color: #6c757d;"></i>
-            <br>
+            
             <span style="color: #6c757d;">Introduction</span>
-            <br>
+            
 
           </div>
-          <div class="text-center mb-4">
+          <div class="text-center mb-4  d-flex flex-column">
             <i class="fa-sharp fa-light fa-oven" style="color: #6c757d;"></i>
-            <br>
+            
             <span style="color: #6c757d;">Directory Structure</span>
-            <br>
+            
 
           </div>
-          <div class="text-center mb-4">
+          <div class="text-center mb-4  d-flex flex-column">
             <i class="fa-thin fa-keyboard" style="color: #6c757d;"></i>
-            <br>
+            
             <span style="color: #6c757d;">Gulp.js</span>
-            <br>
+            
 
           </div>
           <!-- button10 -->
-          <a class="btn  w-100" data-bs-toggle="collapse" href="#multiCollapseExample10" role="button"
+          <a class="btn doc-change w-100  d-flex flex-column" data-bs-toggle="collapse" href="#multiCollapseExample10" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample10">
             <i class="fa-sharp fa-light fa-pen-ruler" style="color: #6c757d;"></i>
-            <br>
+            
             <span class=" w-100" style="color: #6c757d;">CSS</span>
-            <br>
-            <i class="fa-solid fa-angle-up fa-rotate-180" style="color: #6c757d;"></i>
+            
+            <i class="fa-solid fa-angle-up fa-rotate-180 fa-rotate-180 float-end lh-base " style="color: #6c757d;"></i>
           </a>
           <div class="collapse multi-collapse" id="multiCollapseExample10">
             <div class="shadow-sm">
@@ -734,18 +746,18 @@
             </div>
           </div>
 
-          <div class="text-center my-4">
+          <div class="text-center my-4  d-flex flex-column">
             <i class="fa-light fa-medal" style="color: #6c757d;"></i>
-            <br>
+            
             <span style="color: #6c757d;">Credits</span>
-            <br>
+            
 
           </div>
-          <div class="text-center mb-4">
+          <div class="text-center mb-4 d-flex flex-column ">
             <i class="fa-light fa-circle-n" style="color: #6c757d;"></i>
-            <br>
+            
             <span style="color: #6c757d;">Changelog</span>
-            <br>
+            
 
           </div>
 
@@ -1713,12 +1725,30 @@
     let pic1 = document.querySelector('.pic1');
     let bac = document.querySelector('.bac');
     let right = document.querySelector('.w-90-self');
-
+    let pic1_2 = document.querySelector('.pic1-2');
+    let listUnstyled = document.querySelector('.list-unstyled');
+    let docChange = document.querySelectorAll('.doc-change');
     pic1.addEventListener('click', () => {
-      console.log(bac.classList);
-      bac.classList.toggle('d-none');
+    
+      bac.classList.toggle('d-flex');
       right.classList.toggle('right-display');
+      
     })
+    
+    pic1_2.addEventListener('click', () => {
+      bac.classList.toggle('d-flex-2');
+      right.classList.toggle('right-display');
+      listUnstyled.classList.toggle('text-self');
+      console.log(docChange);
+      console.log(docChange[1]);
+      for(i=0; i<9; i++){
+      docChange[i].classList.toggle('text-start');
+      docChange[i].classList.toggle('d-flex');
+      docChange[i].classList.toggle('justify-content-between');
+      docChange[i].classList.toggle('align-items-center');
+      }
+    })
+
 
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
